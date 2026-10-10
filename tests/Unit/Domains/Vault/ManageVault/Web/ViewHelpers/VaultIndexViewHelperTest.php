@@ -54,6 +54,7 @@ class VaultIndexViewHelperTest extends TestCase
                     'show_calendar_tab' => false,
                 ],
                 'url' => [
+                    'today' => env('APP_URL').'/vaults/'.$vault->id.'/today',
                     'dashboard' => env('APP_URL').'/vaults/'.$vault->id,
                     'contacts' => env('APP_URL').'/vaults/'.$vault->id.'/contacts',
                     'calendar' => env('APP_URL').'/vaults/'.$vault->id.'/calendar',

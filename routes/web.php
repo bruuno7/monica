@@ -120,6 +120,7 @@ use App\Domains\Vault\ManageReports\Web\Controllers\ReportImportantDateSummaryCo
 use App\Domains\Vault\ManageReports\Web\Controllers\ReportIndexController;
 use App\Domains\Vault\ManageReports\Web\Controllers\ReportMoodTrackingEventController;
 use App\Domains\Vault\ManageTasks\Web\Controllers\VaultTaskController;
+use App\Domains\Vault\ManageToday\Web\Controllers\VaultTodayController;
 use App\Domains\Vault\ManageVault\Web\Controllers\VaultController;
 use App\Domains\Vault\ManageVault\Web\Controllers\VaultDefaultTabOnDashboardController;
 use App\Domains\Vault\ManageVault\Web\Controllers\VaultFeedController;
@@ -210,6 +211,9 @@ Route::middleware([
 
             // quick capture: record a note, call, task or reminder from anywhere
             Route::post('quick-capture', [VaultQuickCaptureController::class, 'store'])->middleware('can:vault-editor,vault')->name('vault.quick_capture.store');
+
+            // today
+            Route::get('today', [VaultTodayController::class, 'index'])->name('vault.today.index');
 
             // calendar
             Route::get('calendar', [VaultCalendarController::class, 'index'])->name('vault.calendar.index');

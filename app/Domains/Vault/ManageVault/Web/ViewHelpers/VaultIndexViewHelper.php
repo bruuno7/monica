@@ -38,6 +38,9 @@ class VaultIndexViewHelper
                     'show_calendar_tab' => $vault->show_calendar_tab,
                 ],
                 'url' => [
+                    'today' => route('vault.today.index', [
+                        'vault' => $vault->id,
+                    ]),
                     'dashboard' => route('vault.show', [
                         'vault' => $vault->id,
                     ]),

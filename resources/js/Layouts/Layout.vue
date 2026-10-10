@@ -143,6 +143,11 @@ const goToSearchPage = (event) => {
         :links="
           [
             {
+              url: layoutData.vault.url.today,
+              title: $t('Today'),
+              selected: $page.component === 'Vault/Today/Index',
+            },
+            {
               url: layoutData.vault.url.dashboard,
               title: $t('Dashboard'),
               selected: $page.component === 'Vault/Dashboard/Index',

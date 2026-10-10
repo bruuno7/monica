@@ -62,6 +62,7 @@ const navigation = computed(() => {
   if (vault.value) {
     const url = vault.value.url;
     const visibility = vault.value.visibility ?? {};
+    items.push({ id: 'today', label: trans('Today'), icon: Sun, keys: 'g t', run: go(url.today) });
     items.push({
       id: 'dashboard',
       label: trans('Dashboard'),
@@ -79,7 +80,7 @@ const navigation = computed(() => {
     if (visibility.show_companies_tab)
       items.push({ id: 'companies', label: trans('Companies'), icon: Building2, run: go(url.companies) });
     if (visibility.show_tasks_tab)
-      items.push({ id: 'tasks', label: trans('Tasks'), icon: SquareCheckBig, keys: 'g t', run: go(url.tasks) });
+      items.push({ id: 'tasks', label: trans('Tasks'), icon: SquareCheckBig, keys: 'g a', run: go(url.tasks) });
     if (visibility.show_reports_tab)
       items.push({ id: 'reports', label: trans('Reports'), icon: ChartColumn, run: go(url.reports) });
     if (visibility.show_files_tab) items.push({ id: 'files', label: trans('Files'), icon: Folder, run: go(url.files) });
@@ -336,11 +337,12 @@ onBeforeUnmount(() => {
 const shortcuts = computed(() => [
   { keys: [`${modKey} K`], label: trans('Open the command palette') },
   { keys: ['N'], label: trans('Quick capture') },
+  { keys: ['G', 'T'], label: trans('Go to today') },
   { keys: ['G', 'D'], label: trans('Go to the dashboard') },
   { keys: ['G', 'C'], label: trans('Go to the contacts') },
   { keys: ['G', 'K'], label: trans('Go to the calendar') },
   { keys: ['G', 'J'], label: trans('Go to the journals') },
-  { keys: ['G', 'T'], label: trans('Go to the tasks') },
+  { keys: ['G', 'A'], label: trans('Go to the tasks') },
   { keys: ['G', 'V'], label: trans('Go to the vaults') },
   { keys: ['G', 'S'], label: trans('Go to the settings') },
   { keys: ['?'], label: trans('Show this help') },
