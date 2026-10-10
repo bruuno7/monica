@@ -112,7 +112,7 @@ class VaultTodayViewHelper
         $today = $now->copy()->startOfDay();
 
         return ContactImportantDate::whereHas('contact', fn ($query) => $query->where('vault_id', $vault->id)->where('listed', true))
-            ->with(['contact', 'contactImportantDateType'])
+            ->with(['contact.gifts', 'contactImportantDateType'])
             ->whereNotNull('day')
             ->whereNotNull('month')
             ->get()
@@ -130,6 +130,7 @@ class VaultTodayViewHelper
                     'in_days' => $inDays,
                     'age' => $date->year ? $next->year - $date->year : null,
                     'date' => DateHelper::formatMonthAndDay($next),
+                    'has_pending_gift' => $date->contact->gifts->contains(fn ($gift) => $gift->isPending()),
                     'contact' => self::dtoContact($date->contact),
                 ];
             })

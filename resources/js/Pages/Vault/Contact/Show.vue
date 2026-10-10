@@ -36,6 +36,7 @@ import LifeEvent from '@/Shared/Modules/LifeEvent.vue';
 import QuickFacts from '@/Shared/Modules/QuickFacts.vue';
 import StayInTouch from '@/Shared/Modules/StayInTouch.vue';
 import ContactHero from '@/Shared/Modules/ContactHero.vue';
+import Gifts from '@/Shared/Modules/Gifts.vue';
 import Uploadcare from '@/Components/Uploadcare.vue';
 import { ChevronRight } from 'lucide-vue-next';
 
@@ -374,6 +375,8 @@ const navigateToSelected = () => {
                 <Feed v-else-if="module.type === 'feed'" :url="module.data" />
 
                 <Loans v-else-if="module.type === 'loans'" :data="module.data" :layout-data="layoutData" />
+
+                <Gifts v-else-if="module.type === 'gifts'" :data="module.data" />
 
                 <Relationships v-else-if="module.type === 'relationships'" :data="module.data" />
 

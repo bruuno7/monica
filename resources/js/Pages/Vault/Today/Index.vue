@@ -123,6 +123,12 @@ const memoryIcon = { post: BookOpen, life_event: Flame, note: NotebookPen };
                         }}</Link>
                         <p class="truncate text-xs text-ink-muted">
                           {{ date.label }}<span v-if="date.age"> · {{ $t(':count years', { count: date.age }) }}</span>
+                          <Link
+                            v-if="!date.has_pending_gift"
+                            :href="date.contact.url"
+                            class="ms-1 text-accent hover:underline"
+                            >🎁 {{ $t('No gift idea yet') }}</Link
+                          >
                         </p>
                       </div>
                       <span
@@ -240,9 +246,7 @@ const memoryIcon = { post: BookOpen, life_event: Flame, note: NotebookPen };
                   </span>
                   <div class="min-w-0 flex-1">
                     <p class="text-xs font-medium uppercase tracking-wide text-ink-muted">
-                      {{
-                        $tChoice(':count year ago|:count years ago', memory.years_ago, { count: memory.years_ago })
-                      }}
+                      {{ $tChoice(':count year ago|:count years ago', memory.years_ago, { count: memory.years_ago }) }}
                       · {{ memory.year }}
                     </p>
                     <component

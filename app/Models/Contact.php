@@ -337,6 +337,16 @@ class Contact extends VCardResource
     }
 
     /**
+     * Get the gifts associated with the contact.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\Gift, $this>
+     */
+    public function gifts(): HasMany
+    {
+        return $this->hasMany(Gift::class);
+    }
+
+    /**
      * Get the files associated with the contact.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany<\App\Models\File, $this>
