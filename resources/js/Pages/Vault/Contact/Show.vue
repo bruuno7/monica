@@ -275,6 +275,12 @@ const navigateToSelected = () => {
                   {{ $t('Move contact') }}
                 </Link>
               </li>
+              <!-- merge with a duplicate -->
+              <li v-if="data.url.merge" class="mb-2">
+                <Link :href="data.url.merge" class="cursor-pointer text-accent hover:underline">
+                  {{ $t('Merge with a duplicate') }}
+                </Link>
+              </li>
               <!-- download as vcard -->
               <li class="mb-2">
                 <Link @click.prevent="download()" class="cursor-pointer text-accent hover:underline">

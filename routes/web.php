@@ -99,6 +99,7 @@ use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesTimezo
 use App\Domains\Settings\ManageUsers\Web\Controllers\UserController;
 use App\Domains\Vault\ManageCalendar\Web\Controllers\VaultCalendarController;
 use App\Domains\Vault\ManageCompanies\Web\Controllers\VaultCompanyController;
+use App\Domains\Vault\ManageContactMerge\Web\Controllers\ContactMergeController;
 use App\Domains\Vault\ManageFiles\Web\Controllers\VaultFileController;
 use App\Domains\Vault\ManageJournals\Web\Controllers\JournalController;
 use App\Domains\Vault\ManageJournals\Web\Controllers\JournalMetricController;
@@ -248,6 +249,12 @@ Route::middleware([
 
             // vault contacts
             Route::prefix('contacts')->group(function () {
+                // duplicates & merge
+                Route::middleware('can:vault-editor,vault')->group(function () {
+                    Route::get('duplicates', [ContactMergeController::class, 'index'])->name('contact.duplicates.index');
+                    Route::post('merge', [ContactMergeController::class, 'store'])->name('contact.merge.store');
+                });
+
                 Route::get('', [ContactController::class, 'index'])->name('contact.index');
                 Route::get('labels/{label}', [ContactLabelController::class, 'index'])->name('contact.label.index');
                 Route::put('sort', [ContactSortController::class, 'update'])->name('contact.sort.update');

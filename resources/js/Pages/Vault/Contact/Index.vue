@@ -211,6 +211,14 @@ const onKeydown = (event) => {
               </div>
             </div>
 
+            <p
+              v-if="layoutData.vault.permission.at_least_editor && data.url.contact.duplicates"
+              class="mb-3 text-xs text-ink-muted">
+              <Link :href="data.url.contact.duplicates" class="text-accent hover:underline">{{
+                $t('Find duplicate contacts')
+              }}</Link>
+            </p>
+
             <!-- filter -->
             <div v-if="data.contacts.length > 0" class="relative mb-4">
               <Search class="pointer-events-none absolute start-3 top-2.5 h-4 w-4 text-ink-subtle" />

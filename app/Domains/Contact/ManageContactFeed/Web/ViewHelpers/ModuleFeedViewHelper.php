@@ -72,6 +72,7 @@ class ModuleFeedViewHelper
             'unfavorited' => trans('removed the contact from the favorites'),
             'changed_avatar' => trans('updated the avatar of the contact'),
             'mood_tracking_event_added' => trans('logged the mood'),
+            'contact_merged' => trans('merged a duplicate contact'),
             default => trans('unknown action'),
         };
     }

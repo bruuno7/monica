@@ -70,6 +70,10 @@ class ContactShowViewHelper
                     'vault' => $contact->vault_id,
                     'contact' => $contact->id,
                 ]),
+                'merge' => route('contact.duplicates.index', [
+                    'vault' => $contact->vault_id,
+                    'contact' => $contact->id,
+                ]),
                 'update_avatar' => route('contact.avatar.update', [
                     'vault' => $contact->vault_id,
                     'contact' => $contact->id,
@@ -122,6 +126,10 @@ class ContactShowViewHelper
             ],
             'url' => [
                 'toggle_archive' => route('contact.archive.update', [
+                    'vault' => $contact->vault_id,
+                    'contact' => $contact->id,
+                ]),
+                'merge' => route('contact.duplicates.index', [
                     'vault' => $contact->vault_id,
                     'contact' => $contact->id,
                 ]),

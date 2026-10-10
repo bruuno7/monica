@@ -68,6 +68,9 @@ class ContactIndexViewHelper
                     'create' => route('contact.create', [
                         'vault' => $vault->id,
                     ]),
+                    'duplicates' => route('contact.duplicates.index', [
+                        'vault' => $vault->id,
+                    ]),
                 ],
                 'sort' => [
                     'update' => route('contact.sort.update', [

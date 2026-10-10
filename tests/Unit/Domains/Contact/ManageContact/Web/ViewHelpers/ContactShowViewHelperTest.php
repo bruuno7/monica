@@ -85,6 +85,7 @@ class ContactShowViewHelperTest extends TestCase
         $this->assertEquals(
             [
                 'toggle_archive' => env('APP_URL').'/vaults/'.$contact->vault->id.'/contacts/'.$contact->id.'/toggle',
+                'merge' => env('APP_URL').'/vaults/'.$contact->vault->id.'/contacts/duplicates?contact='.$contact->id,
                 'update_template' => env('APP_URL').'/vaults/'.$contact->vault->id.'/contacts/'.$contact->id.'/update-template',
                 'destroy' => env('APP_URL').'/vaults/'.$contact->vault->id.'/contacts/'.$contact->id,
                 'update_avatar' => env('APP_URL').'/vaults/'.$contact->vault->id.'/contacts/'.$contact->id.'/avatar',
