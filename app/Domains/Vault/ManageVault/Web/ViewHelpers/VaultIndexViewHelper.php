@@ -77,6 +77,9 @@ class VaultIndexViewHelper
                     'search_contacts_only' => route('vault.user.search.index', [
                         'vault' => $vault->id,
                     ]),
+                    'quick_capture' => route('vault.quick_capture.store', [
+                        'vault' => $vault->id,
+                    ]),
                 ],
             ] : null,
             'url' => [

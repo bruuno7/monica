@@ -137,6 +137,7 @@ use App\Domains\Vault\ManageVaultSettings\Web\Controllers\VaultSettingsTabVisibi
 use App\Domains\Vault\ManageVaultSettings\Web\Controllers\VaultSettingsTagController;
 use App\Domains\Vault\ManageVaultSettings\Web\Controllers\VaultSettingsTemplateController;
 use App\Domains\Vault\ManageVaultSettings\Web\Controllers\VaultSettingsUserController;
+use App\Domains\Vault\QuickCapture\Web\Controllers\VaultQuickCaptureController;
 use App\Domains\Vault\Search\Web\Controllers\VaultContactSearchController;
 use App\Domains\Vault\Search\Web\Controllers\VaultMostConsultedContactsController;
 use App\Domains\Vault\Search\Web\Controllers\VaultSearchController;
@@ -204,6 +205,9 @@ Route::middleware([
         Route::middleware('can:vault-viewer,vault')->prefix('{vault}')->group(function () {
             // update dashboard's default tab
             Route::put('defaultTab', [VaultDefaultTabOnDashboardController::class, 'update'])->name('vault.default_tab.update');
+
+            // quick capture: record a note, call, task or reminder from anywhere
+            Route::post('quick-capture', [VaultQuickCaptureController::class, 'store'])->middleware('can:vault-editor,vault')->name('vault.quick_capture.store');
 
             // calendar
             Route::get('calendar', [VaultCalendarController::class, 'index'])->name('vault.calendar.index');

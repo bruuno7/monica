@@ -5,6 +5,7 @@ import Toaster from '@/Shared/Toaster.vue';
 import FooterLayout from '@/Layouts/FooterLayout.vue';
 import LayoutNav from '@/Layouts/LayoutNav.vue';
 import ThemeSwitcher from '@/Shared/ThemeSwitcher.vue';
+import QuickCapture from '@/Shared/QuickCapture.vue';
 import { Settings, LogOut, ScanSearch, ChevronRight } from 'lucide-vue-next';
 import { flash, watchSystemTheme } from '@/methods.js';
 
@@ -220,5 +221,6 @@ const goToSearchPage = () => {
     <FooterLayout />
   </div>
 
+  <QuickCapture v-if="insideVault" :layout-data="layoutData" />
   <Toaster />
 </template>
