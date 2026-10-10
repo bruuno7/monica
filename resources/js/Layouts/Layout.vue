@@ -1,15 +1,17 @@
 <script setup>
 import { onMounted } from 'vue';
-import { Link, Head, router } from '@inertiajs/vue3';
+import { Link, Head } from '@inertiajs/vue3';
 import Toaster from '@/Shared/Toaster.vue';
 import FooterLayout from '@/Layouts/FooterLayout.vue';
 import LayoutNav from '@/Layouts/LayoutNav.vue';
 import ThemeSwitcher from '@/Shared/ThemeSwitcher.vue';
 import QuickCapture from '@/Shared/QuickCapture.vue';
+import CommandPalette from '@/Shared/CommandPalette.vue';
+import emitter from 'tiny-emitter/instance';
 import { Settings, LogOut, ScanSearch, ChevronRight } from 'lucide-vue-next';
 import { flash, watchSystemTheme } from '@/methods.js';
 
-const props = defineProps({
+defineProps({
   title: String,
   insideVault: Boolean,
   layoutData: Object,
@@ -24,10 +26,10 @@ onMounted(() => {
   }
 });
 
-const goToSearchPage = () => {
-  router.visit(props.layoutData.vault.url.search, {
-    data: { searchTerm: '' },
-  });
+// The search box opens the command palette; the full search page stays one action away.
+const goToSearchPage = (event) => {
+  event.target.blur();
+  emitter.emit('command-palette:open');
 };
 </script>
 
@@ -60,6 +62,11 @@ const goToSearchPage = () => {
             class="dark:highlight-white/5 block w-64 rounded-md border border-line-strong px-2 py-1 text-center placeholder:text-ink-muted hover:cursor-pointer focus:border-accent focus:ring-accent dark:border-0 dark:bg-slate-900 dark:hover:bg-slate-700 sm:text-sm"
             :placeholder="$t('Search something')"
             @focus="goToSearchPage" />
+          <kbd
+            class="pointer-events-none absolute end-2 top-1.5 hidden rounded-sm border border-line px-1 font-sans text-[10px] leading-4 text-ink-subtle md:inline"
+            aria-hidden="true"
+            >⌘K</kbd
+          >
         </div>
 
         <!-- icons -->
@@ -222,5 +229,6 @@ const goToSearchPage = () => {
   </div>
 
   <QuickCapture v-if="insideVault" :layout-data="layoutData" />
+  <CommandPalette :layout-data="layoutData" />
   <Toaster />
 </template>
