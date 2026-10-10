@@ -3,11 +3,11 @@
 namespace App\Domains\Contact\ManageNotes\Web\ViewHelpers;
 
 use App\Helpers\DateHelper;
+use App\Helpers\MarkdownHelper;
 use App\Helpers\UserHelper;
 use App\Models\Contact;
 use App\Models\Note;
 use App\Models\User;
-use Illuminate\Support\Str;
 
 class ModuleNotesViewHelper
 {
@@ -47,7 +47,8 @@ class ModuleNotesViewHelper
         return [
             'id' => $note->id,
             'body' => $note->body,
-            'body_excerpt' => Str::length($note->body) >= 200 ? Str::limit($note->body, 200) : null,
+            'body_html' => MarkdownHelper::toHtml($note->body),
+            'body_excerpt' => MarkdownHelper::excerpt($note->body),
             'show_full_content' => false,
             'title' => $note->title,
             'emotion' => $note->emotion ? [

@@ -345,7 +345,7 @@ const navigateToSelected = () => {
             <!-- all the modules -->
             <div v-if="data.modules.length > 0">
               <div v-for="module in data.modules" :key="module.id">
-                <Notes v-if="module.type === 'notes'" :data="module.data" />
+                <Notes v-if="module.type === 'notes'" :data="module.data" :layout-data="layoutData" />
 
                 <Reminders v-else-if="module.type === 'reminders'" :data="module.data" />
 

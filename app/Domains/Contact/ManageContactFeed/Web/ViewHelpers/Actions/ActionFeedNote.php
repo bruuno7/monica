@@ -2,6 +2,7 @@
 
 namespace App\Domains\Contact\ManageContactFeed\Web\ViewHelpers\Actions;
 
+use App\Helpers\MarkdownHelper;
 use App\Models\ContactFeedItem;
 use Illuminate\Support\Str;
 
@@ -17,7 +18,7 @@ class ActionFeedNote
                 'object' => $note ? [
                     'id' => $note->id,
                     'title' => $note->title,
-                    'body' => Str::limit($note->body, 30),
+                    'body' => Str::limit(MarkdownHelper::toPlainText($note->body), 30),
                 ] : null,
                 'description' => $item->description,
             ],

@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import 'charts.css/dist/charts.css' layer(base);
 @plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant oled (&:where(.oled, .oled *));
@@ -182,6 +183,37 @@
 
 @utility tabular {
   font-variant-numeric: tabular-nums;
+}
+
+/* Rendered Markdown (notes, posts): compact prose that follows the theme tokens. */
+@utility prose-note {
+  @apply prose prose-sm max-w-none dark:prose-invert;
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-links: var(--accent);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-bullets: var(--ink-subtle);
+  --tw-prose-quotes: var(--ink-muted);
+  --tw-prose-quote-borders: var(--line-strong);
+  --tw-prose-code: var(--ink);
+  --tw-prose-hr: var(--line);
+  --tw-prose-invert-body: var(--ink);
+  --tw-prose-invert-headings: var(--ink);
+  --tw-prose-invert-links: var(--accent);
+  --tw-prose-invert-bold: var(--ink);
+  --tw-prose-invert-bullets: var(--ink-subtle);
+  --tw-prose-invert-quotes: var(--ink-muted);
+  --tw-prose-invert-quote-borders: var(--line-strong);
+  --tw-prose-invert-code: var(--ink);
+  --tw-prose-invert-hr: var(--line);
+}
+
+.prose-note > :first-child {
+  margin-top: 0;
+}
+
+.prose-note > :last-child {
+  margin-bottom: 0;
 }
 
 .icon-breadcrumb {

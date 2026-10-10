@@ -21,10 +21,13 @@
         <text-area
           v-model="form.body"
           :label="$t('Body')"
-          :rows="10"
+          :rows="6"
           :required="true"
           :maxlength="65535"
           :markdown="true"
+          :mention-url="mentionUrl"
+          :draft-key="draftKey"
+          :placeholder="$t('What happened? Type @ to mention someone, / for a template.')"
           :textarea-class="'block w-full mb-3'" />
 
         <!-- title -->
@@ -102,9 +105,7 @@
             </span>
           </div>
           <!-- full body -->
-          <div v-else class="p-3 whitespace-pre-line">
-            {{ note.body }}
-          </div>
+          <div v-else class="prose-note p-3" v-html="note.body_html"></div>
 
           <!-- details -->
           <div
@@ -147,10 +148,11 @@
             <text-area
               v-model="form.body"
               :label="$t('Body')"
-              :rows="10"
+              :rows="6"
               :required="true"
               :maxlength="65535"
               :markdown="true"
+              :mention-url="mentionUrl"
               :textarea-class="'block w-full mb-3'" />
 
             <!-- title -->
@@ -253,6 +255,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    layoutData: {
+      type: Object,
+      default: null,
+    },
   },
 
   data() {
@@ -270,6 +276,16 @@ export default {
         errors: [],
       },
     };
+  },
+
+  computed: {
+    mentionUrl() {
+      return this.layoutData?.vault?.url?.search_contacts_only ?? null;
+    },
+
+    draftKey() {
+      return `note.${this.data.url.store}`;
+    },
   },
 
   created() {

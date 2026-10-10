@@ -3,6 +3,7 @@
 namespace App\Domains\Vault\Search\Web\ViewHelpers;
 
 use App\Helpers\DateHelper;
+use App\Helpers\MarkdownHelper;
 use App\Models\Contact;
 use App\Models\Group;
 use App\Models\Note;
@@ -55,7 +56,8 @@ class VaultSearchIndexViewHelper
             'id' => $note->id,
             'title' => $note->title,
             'body' => $note->body,
-            'body_excerpt' => Str::limit($note->body, 100),
+            'body_html' => MarkdownHelper::toHtml($note->body),
+            'body_excerpt' => Str::limit(MarkdownHelper::toPlainText($note->body), 100),
             'show_full_content' => false,
             'written_at' => DateHelper::formatDate($note->created_at),
             'contact' => [

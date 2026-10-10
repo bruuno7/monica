@@ -3,6 +3,7 @@
 namespace Tests\Unit\Domains\Contact\ManageNotes\Web\ViewHelpers;
 
 use App\Domains\Contact\ManageNotes\Web\ViewHelpers\ModuleNotesViewHelper;
+use App\Helpers\MarkdownHelper;
 use App\Models\Contact;
 use App\Models\Emotion;
 use App\Models\Note;
@@ -77,6 +78,7 @@ class ModuleNotesViewHelperTest extends TestCase
             [
                 'id' => $note->id,
                 'body' => $note->body,
+                'body_html' => MarkdownHelper::toHtml($note->body),
                 'body_excerpt' => null,
                 'show_full_content' => false,
                 'title' => $note->title,

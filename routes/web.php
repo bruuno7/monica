@@ -143,6 +143,7 @@ use App\Domains\Vault\Search\Web\Controllers\VaultSearchController;
 use App\Http\Controllers\Auth\AcceptInvitationController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\SocialiteCallbackController;
+use App\Http\Controllers\MarkdownPreviewController;
 use App\Http\Controllers\Profile\UserTokenController;
 use App\Http\Middleware\HandleInertiaRequests;
 use Illuminate\Support\Facades\Auth;
@@ -187,6 +188,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    // markdown preview for the editors
+    Route::post('markdown/preview', [MarkdownPreviewController::class, 'store'])->name('markdown.preview');
+
     // vaults
     Route::prefix('vaults')->group(function () {
         Route::get('', [VaultController::class, 'index'])->name('vault.index');

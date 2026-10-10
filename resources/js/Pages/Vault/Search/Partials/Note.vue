@@ -58,9 +58,7 @@ const showFull = (note) => {
           {{ note.body_excerpt }}
           <span class="cursor-pointer text-accent hover:underline" @click="showFull(note)">{{ $t('View all') }}</span>
         </div>
-        <div v-else class="p-3">
-          {{ note.body }}
-        </div>
+        <div v-else class="prose-note p-3" v-html="note.body_html"></div>
         <div
           class="flex border-t border-gray-200 px-3 py-2 text-xs text-gray-600 hover:rounded-b hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:text-gray-400 dark:hover:bg-slate-800">
           <!-- date -->

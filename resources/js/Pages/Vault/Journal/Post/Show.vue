@@ -119,7 +119,7 @@ defineProps({
               </div>
 
               <!-- sections -->
-              <div v-if="data.sections.length > 0" class="prose">
+              <div v-if="data.sections.length > 0" class="prose-note prose-base">
                 <div v-for="section in data.sections" :key="section.id" class="mb-4">
                   <div v-if="data.sections.length > 1" class="mb-1 italic text-gray-400">
                     {{ section.label }}
