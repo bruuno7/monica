@@ -93,6 +93,7 @@ use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesLocale
 use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesMapsPreferenceController;
 use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesNameOrderController;
 use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesNumberFormatController;
+use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesThemeController;
 use App\Domains\Settings\ManageUserPreferences\Web\Controllers\PreferencesTimezoneController;
 use App\Domains\Settings\ManageUsers\Web\Controllers\UserController;
 use App\Domains\Vault\ManageCalendar\Web\Controllers\VaultCalendarController;
@@ -560,6 +561,7 @@ Route::middleware([
             Route::post('maps', [PreferencesMapsPreferenceController::class, 'store'])->name('maps.store');
             Route::post('locale', [PreferencesLocaleController::class, 'store'])->name('locale.store');
             Route::post('help', [PreferencesHelpController::class, 'store'])->name('help.store');
+            Route::post('theme', [PreferencesThemeController::class, 'store'])->name('theme.store');
         });
 
         // notifications

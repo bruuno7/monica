@@ -21,6 +21,7 @@ class UserPreferencesIndexViewHelper
             'distance_format' => self::dtoDistanceFormat($user),
             'maps' => self::dtoMapsPreferences($user),
             'locale' => self::dtoLocale($user),
+            'theme' => self::dtoTheme($user),
             'url' => [
                 'settings' => route('settings.index'),
                 'back' => route('settings.index'),
@@ -210,5 +211,50 @@ class UserPreferencesIndexViewHelper
     public static function language(?string $code): string
     {
         return $code !== null ? __('auth.lang', [], $code) : '';
+    }
+
+    public static function dtoTheme(User $user): array
+    {
+        $themes = collect([
+            [
+                'id' => User::THEME_LIGHT,
+                'name' => trans('Light'),
+                'description' => trans('Always use the light appearance.'),
+            ],
+            [
+                'id' => User::THEME_DARK,
+                'name' => trans('Dark'),
+                'description' => trans('Always use the dark appearance.'),
+            ],
+            [
+                'id' => User::THEME_SYSTEM,
+                'name' => trans('System'),
+                'description' => trans('Follow the appearance of your device, and switch automatically.'),
+            ],
+        ]);
+
+        $accentColors = collect(User::ACCENT_COLORS)->map(fn (string $color) => [
+            'id' => $color,
+            'name' => match ($color) {
+                'blue' => trans('Blue'),
+                'violet' => trans('Violet'),
+                'rose' => trans('Rose'),
+                'emerald' => trans('Emerald'),
+                'amber' => trans('Amber'),
+                'teal' => trans('Teal'),
+            },
+        ]);
+
+        return [
+            'theme' => $user->theme ?? User::THEME_SYSTEM,
+            'theme_i18n' => $themes->firstWhere('id', $user->theme ?? User::THEME_SYSTEM)['name'],
+            'accent_color' => $user->accent_color ?? User::ACCENT_COLOR_DEFAULT,
+            'oled_dark' => (bool) $user->oled_dark,
+            'themes' => $themes,
+            'accent_colors' => $accentColors,
+            'url' => [
+                'store' => route('settings.preferences.theme.store'),
+            ],
+        ];
     }
 }

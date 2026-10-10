@@ -34,7 +34,7 @@
                 <InertiaLink
                   v-if="relationshipType.contact.url.show"
                   :href="relationshipType.contact.url.show"
-                  class="text-blue-500 hover:underline">
+                  class="text-accent hover:underline">
                   {{ relationshipType.contact.name }}
                 </InertiaLink>
                 <span v-else>{{ relationshipType.contact.name }}</span>

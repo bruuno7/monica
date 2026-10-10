@@ -71,7 +71,7 @@ const destroy = (date) => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </Link>
             </li>
@@ -86,7 +86,7 @@ const destroy = (date) => {
               </svg>
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.contact" class="text-blue-500 hover:underline">
+              <Link :href="data.url.contact" class="text-accent hover:underline">
                 {{ $t('Profile of :name', { name: data.contact.name }) }}
               </Link>
             </li>
@@ -152,7 +152,7 @@ const destroy = (date) => {
                 <!-- actions -->
                 <ul class="text-sm">
                   <li class="me-4 inline cursor-pointer" @click="updateDateModal(date)">
-                    <span class="text-blue-500 hover:underline">{{ $t('Edit') }}</span>
+                    <span class="text-accent hover:underline">{{ $t('Edit') }}</span>
                   </li>
                   <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(date)">
                     {{ $t('Delete') }}

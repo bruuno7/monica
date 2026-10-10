@@ -70,7 +70,7 @@ const toggle = (task) => {
               <div class="flex items-center">
                 <Avatar :data="task.contact.avatar" :class="'me-2 h-5 w-5 rounded-full'" />
 
-                <Link :href="task.contact.url.show" class="text-blue-500 hover:underline">
+                <Link :href="task.contact.url.show" class="text-accent hover:underline">
                   {{ task.contact.name }}
                 </Link>
               </div>
@@ -93,7 +93,7 @@ const toggle = (task) => {
     <div class="text-center">
       <Link
         :href="data.url.index"
-        class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-blue-500 hover:border-gray-500 dark:border-gray-700">
+        class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-accent hover:border-gray-500 dark:border-gray-700">
         {{ $t('View all') }}
       </Link>
     </div>

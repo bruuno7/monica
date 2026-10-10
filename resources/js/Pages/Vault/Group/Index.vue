@@ -24,7 +24,7 @@ defineProps({
               v-for="group in data"
               :key="group.id"
               class="flex items-center justify-between border-b border-gray-200 px-5 py-2 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
-              <Link :href="group.url.show" class="text-blue-500 hover:underline">{{ group.name }}</Link>
+              <Link :href="group.url.show" class="text-accent hover:underline">{{ group.name }}</Link>
 
               <div v-if="group.contacts" class="relative flex -space-x-2 overflow-hidden py-1">
                 <div v-for="contact in group.contacts" :key="contact.id" class="inline-block">

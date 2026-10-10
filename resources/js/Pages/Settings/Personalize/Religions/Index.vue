@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -126,7 +126,7 @@
                 <!-- actions -->
                 <ul class="text-sm">
                   <li class="inline cursor-pointer" @click="renameReligionModal(element)">
-                    <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                    <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                   </li>
                   <li class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(element)">
                     {{ $t('Delete') }}

@@ -59,7 +59,7 @@
           <!-- actions -->
           <ul class="text-sm">
             <li class="inline cursor-pointer" @click="edit(type)">
-              <span class="text-blue-500 hover:underline">{{ $t('Edit') }}</span>
+              <span class="text-accent hover:underline">{{ $t('Edit') }}</span>
             </li>
             <li
               v-if="type.can_be_deleted"

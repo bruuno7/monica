@@ -126,7 +126,7 @@ const policy = () => {
       <Beta :beta="beta" />
 
       <div class="mt-4 flex items-center justify-end">
-        <Link :href="route('login')" class="me-4 text-sm text-blue-500 hover:underline">
+        <Link :href="route('login')" class="me-4 text-sm text-accent hover:underline">
           {{ $t('Already registered?') }}
         </Link>
 

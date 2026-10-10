@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -131,14 +131,14 @@
             class="item-list border-b border-gray-200 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
             <!-- detail of the template -->
             <div v-if="renameTemplateModalShownId !== template.id" class="flex items-center justify-between px-5 py-2">
-              <InertiaLink :href="template.url.show" class="text-blue-500 hover:underline">
+              <InertiaLink :href="template.url.show" class="text-accent hover:underline">
                 {{ template.name }}
               </InertiaLink>
 
               <!-- actions -->
               <ul class="text-sm">
                 <li class="me-4 inline cursor-pointer" @click="showUpdateTemplateModal(template)">
-                  <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                  <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                 </li>
                 <li
                   v-if="template.can_be_deleted"

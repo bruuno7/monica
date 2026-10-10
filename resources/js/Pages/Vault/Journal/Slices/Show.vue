@@ -66,7 +66,7 @@ const destroy = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -81,7 +81,7 @@ const destroy = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.journal.url.show" class="text-blue-500 hover:underline">{{ data.journal.name }}</Link>
+              <Link :href="data.journal.url.show" class="text-accent hover:underline">{{ data.journal.name }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -94,9 +94,7 @@ const destroy = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.url.slices_index" class="text-blue-500 hover:underline">{{
-                $t('Slices of life')
-              }}</Link>
+              <Link :href="data.url.slices_index" class="text-accent hover:underline">{{ $t('Slices of life') }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -227,19 +225,19 @@ const destroy = () => {
             <ul class="text-xs">
               <!-- destroy slice -->
               <li class="mb-2">
-                <Link :href="data.slice.url.edit" class="cursor-pointer text-blue-500 hover:underline">{{
+                <Link :href="data.slice.url.edit" class="cursor-pointer text-accent hover:underline">{{
                   $t('Edit')
                 }}</Link>
               </li>
               <!-- remove cover image -->
               <li v-if="localSlice.cover_image" class="mb-2">
-                <span @click.prevent="destroyCoverImage()" class="cursor-pointer text-blue-500 hover:underline">
+                <span @click.prevent="destroyCoverImage()" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Remove cover image') }}
                 </span>
               </li>
               <!-- destroy slice -->
               <li class="mb-2">
-                <span @click.prevent="destroy()" class="cursor-pointer text-blue-500 hover:underline">
+                <span @click.prevent="destroy()" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Delete the slice') }}
                 </span>
               </li>
@@ -265,7 +263,7 @@ const destroy = () => {
                 <!-- content -->
                 <div>
                   <span
-                    ><Link :href="post.url.show" class="text-blue-500 hover:underline">{{ post.title }}</Link></span
+                    ><Link :href="post.url.show" class="text-accent hover:underline">{{ post.title }}</Link></span
                   >
                   <p v-if="post.excerpt">{{ post.excerpt }}</p>
                 </div>

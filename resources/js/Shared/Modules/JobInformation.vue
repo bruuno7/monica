@@ -36,7 +36,7 @@
 
           <p
             v-if="showCreateCompanyLink"
-            class="cursor-pointer text-sm text-blue-500 hover:underline"
+            class="cursor-pointer text-sm text-accent hover:underline"
             @click="showCreateCompany()">
             {{ $t('Or create a new one') }}
           </p>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="border-t border-gray-200 p-2 dark:border-gray-700">
-          <p class="cursor-pointer text-sm text-blue-500 hover:underline" @click="reset()">
+          <p class="cursor-pointer text-sm text-accent hover:underline" @click="reset()">
             {{ $t('Or reset the fields') }}
           </p>
         </div>

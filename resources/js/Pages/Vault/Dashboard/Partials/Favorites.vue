@@ -26,7 +26,7 @@
           <div class="mb-2 flex items-center text-sm">
             <avatar :data="favorite.avatar" :class="'me-2 h-5 w-5 rounded-full'" />
 
-            <InertiaLink :href="favorite.url.show" class="text-blue-500 hover:underline">
+            <InertiaLink :href="favorite.url.show" class="text-accent hover:underline">
               {{ favorite.name }}
             </InertiaLink>
           </div>

@@ -33,7 +33,7 @@ defineProps({
         v-for="contact in data"
         :key="contact.id"
         class="item-list border-b border-gray-200 p-3 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
-        <Link :href="contact.url" class="text-blue-500 hover:underline">
+        <Link :href="contact.url" class="text-accent hover:underline">
           {{ contact.name }}
         </Link>
       </li>

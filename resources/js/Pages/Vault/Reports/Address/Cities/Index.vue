@@ -20,9 +20,7 @@ defineProps({
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.reports" class="text-blue-500 hover:underline">{{
-                $t('Reports')
-              }}</Link>
+              <Link :href="layoutData.vault.url.reports" class="text-accent hover:underline">{{ $t('Reports') }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -35,9 +33,7 @@ defineProps({
               </svg>
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.addresses" class="text-blue-500 hover:underline">{{
-                $t('List of addresses')
-              }}</Link>
+              <Link :href="data.url.addresses" class="text-accent hover:underline">{{ $t('List of addresses') }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg

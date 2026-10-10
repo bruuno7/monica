@@ -70,7 +70,7 @@
             <!-- actions -->
             <ul class="text-sm">
               <li class="me-4 inline" @click="showEditPetModal(pet)">
-                <span class="cursor-pointer text-blue-500 hover:underline">{{ $t('Edit') }}</span>
+                <span class="cursor-pointer text-accent hover:underline">{{ $t('Edit') }}</span>
               </li>
               <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(pet)">
                 {{ $t('Delete') }}

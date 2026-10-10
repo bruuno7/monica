@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -40,91 +40,91 @@
           <ul>
             <li class="mb-2 flex">
               <span class="me-2">📐</span>
-              <InertiaLink :href="data.url.manage_templates" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_templates" class="text-accent hover:underline">
                 {{ $t('Manage templates') }}
               </InertiaLink>
             </li>
             <!-- <li class="mb-2 flex">
               <span class="me-2">🥪</span>
-              <InertiaLink :href="data.url.manage_modules" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_modules" class="text-accent hover:underline">
                 {{ $t('Manage modules') }}
               </InertiaLink>
             </li> -->
             <li class="mb-2 flex">
               <span class="me-2">👥</span>
-              <InertiaLink :href="data.url.manage_relationships" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_relationships" class="text-accent hover:underline">
                 {{ $t('Manage relationship types') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">👥</span>
-              <InertiaLink :href="data.url.manage_group_types" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_group_types" class="text-accent hover:underline">
                 {{ $t('Manage group types') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">👩‍🔬</span>
-              <InertiaLink :href="data.url.manage_pronouns" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_pronouns" class="text-accent hover:underline">
                 {{ $t('Manage pronouns') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">🚻</span>
-              <InertiaLink :href="data.url.manage_genders" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_genders" class="text-accent hover:underline">
                 {{ $t('Manage genders') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">🏖</span>
-              <InertiaLink :href="data.url.manage_address_types" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_address_types" class="text-accent hover:underline">
                 {{ $t('Manage address types') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">☎️</span>
-              <InertiaLink :href="data.url.manage_contact_information_types" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_contact_information_types" class="text-accent hover:underline">
                 {{ $t('Manage contact information types') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">📲</span>
-              <InertiaLink :href="data.url.manage_call_reasons" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_call_reasons" class="text-accent hover:underline">
                 {{ $t('Manage call reasons') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">🐱</span>
-              <InertiaLink :href="data.url.manage_pet_categories" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_pet_categories" class="text-accent hover:underline">
                 {{ $t('Manage pet categories') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">🎁</span>
-              <InertiaLink :href="data.url.manage_gift_occasions" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_gift_occasions" class="text-accent hover:underline">
                 {{ $t('Manage gift occasions') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">🎁</span>
-              <InertiaLink :href="data.url.manage_gift_states" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_gift_states" class="text-accent hover:underline">
                 {{ $t('Manage gift states') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">📮</span>
-              <InertiaLink :href="data.url.manage_post_templates" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_post_templates" class="text-accent hover:underline">
                 {{ $t('Manage post templates') }}
               </InertiaLink>
             </li>
             <li class="mb-2 flex">
               <span class="me-2">💵</span>
-              <InertiaLink :href="data.url.manage_currencies" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_currencies" class="text-accent hover:underline">
                 {{ $t('Manage currencies') }}
               </InertiaLink>
             </li>
             <li class="flex">
               <span class="me-2">⛪</span>
-              <InertiaLink :href="data.url.manage_religions" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.manage_religions" class="text-accent hover:underline">
                 {{ $t('Manage religions') }}
               </InertiaLink>
             </li>

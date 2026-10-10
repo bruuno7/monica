@@ -42,7 +42,7 @@ const get = (day) => {
                 <div class="inline-flex rounded-md shadow-xs">
                   <Link
                     :href="data.url.previous"
-                    class="flex items-center gap-2 rounded-s-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+                    class="flex items-center gap-2 rounded-s-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
                     <ChevronLeft class="h-4 w-4" />
 
                     {{ data.previous_month }}
@@ -50,7 +50,7 @@ const get = (day) => {
 
                   <Link
                     :href="data.url.next"
-                    class="flex items-center gap-2 rounded-e-md border-y border-e border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+                    class="flex items-center gap-2 rounded-e-md border-y border-e border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
                     {{ data.next_month }}
 
                     <ChevronRight class="h-4 w-4" />
@@ -223,7 +223,7 @@ const get = (day) => {
               </h2>
               <ul class="p-3">
                 <li v-for="post in loadedDay.posts" :key="post.id" class="mb-2">
-                  <Link :href="post.url.show" class="text-sm text-blue-500 hover:underline">{{ post.title }}</Link>
+                  <Link :href="post.url.show" class="text-sm text-accent hover:underline">{{ post.title }}</Link>
                 </li>
               </ul>
             </div>

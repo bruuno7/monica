@@ -3,9 +3,165 @@
 @plugin '@tailwindcss/forms';
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant oled (&:where(.oled, .oled *));
 
 @theme {
   --default-font-family: Nunito, var(--font-sans);
+}
+
+/*
+ * Semantic design tokens.
+ *
+ * Utilities like `bg-surface`, `text-ink`, `border-line` or `text-accent` resolve
+ * at runtime to the CSS variables below, so a single class works in light mode,
+ * dark mode, the OLED variant and with any accent color chosen by the user.
+ */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+
+    --surface: #ffffff;
+    --surface-raised: var(--color-gray-50);
+    --surface-sunken: var(--color-gray-100);
+    --ink: var(--color-gray-700);
+    --ink-muted: var(--color-gray-500);
+    --ink-subtle: var(--color-gray-400);
+    --line: var(--color-gray-200);
+    --line-strong: var(--color-gray-300);
+
+    --accent: var(--color-blue-500);
+    --accent-strong: var(--color-blue-600);
+    --accent-soft: var(--color-blue-50);
+    --accent-contrast: #ffffff;
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --surface: var(--color-gray-800);
+    --surface-raised: var(--color-gray-900);
+    --surface-sunken: var(--color-slate-900);
+    --ink: var(--color-gray-300);
+    --ink-muted: var(--color-gray-400);
+    --ink-subtle: var(--color-gray-500);
+    --line: var(--color-gray-700);
+    --line-strong: var(--color-gray-600);
+
+    --accent: var(--color-sky-400);
+    --accent-strong: var(--color-sky-300);
+    --accent-soft: --alpha(var(--color-sky-400) / 15%);
+    --accent-contrast: var(--color-gray-900);
+  }
+
+  /* Pure black variant for OLED screens. */
+  .dark.oled {
+    --surface: #000000;
+    --surface-raised: #0a0a0a;
+    --surface-sunken: #050505;
+    --line: var(--color-neutral-800);
+    --line-strong: var(--color-neutral-700);
+  }
+
+  /* Accent colors. The light shade is used on dark backgrounds for contrast. */
+  [data-accent='violet'] {
+    --accent: var(--color-violet-500);
+    --accent-strong: var(--color-violet-600);
+    --accent-soft: var(--color-violet-50);
+  }
+  .dark[data-accent='violet'] {
+    --accent: var(--color-violet-400);
+    --accent-strong: var(--color-violet-300);
+    --accent-soft: --alpha(var(--color-violet-400) / 15%);
+  }
+
+  [data-accent='rose'] {
+    --accent: var(--color-rose-500);
+    --accent-strong: var(--color-rose-600);
+    --accent-soft: var(--color-rose-50);
+  }
+  .dark[data-accent='rose'] {
+    --accent: var(--color-rose-400);
+    --accent-strong: var(--color-rose-300);
+    --accent-soft: --alpha(var(--color-rose-400) / 15%);
+  }
+
+  [data-accent='emerald'] {
+    --accent: var(--color-emerald-600);
+    --accent-strong: var(--color-emerald-700);
+    --accent-soft: var(--color-emerald-50);
+  }
+  .dark[data-accent='emerald'] {
+    --accent: var(--color-emerald-400);
+    --accent-strong: var(--color-emerald-300);
+    --accent-soft: --alpha(var(--color-emerald-400) / 15%);
+  }
+
+  [data-accent='amber'] {
+    --accent: var(--color-amber-600);
+    --accent-strong: var(--color-amber-700);
+    --accent-soft: var(--color-amber-50);
+  }
+  .dark[data-accent='amber'] {
+    --accent: var(--color-amber-400);
+    --accent-strong: var(--color-amber-300);
+    --accent-soft: --alpha(var(--color-amber-400) / 15%);
+  }
+
+  [data-accent='teal'] {
+    --accent: var(--color-teal-600);
+    --accent-strong: var(--color-teal-700);
+    --accent-soft: var(--color-teal-50);
+  }
+  .dark[data-accent='teal'] {
+    --accent: var(--color-teal-400);
+    --accent-strong: var(--color-teal-300);
+    --accent-soft: --alpha(var(--color-teal-400) / 15%);
+  }
+
+  /* Smooth hand-over between light and dark, only once the page has loaded. */
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition:
+      background-color 250ms ease-out,
+      border-color 250ms ease-out,
+      color 250ms ease-out,
+      fill 250ms ease-out,
+      stroke 250ms ease-out !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.theme-transition,
+    html.theme-transition * {
+      transition: none !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
 }
 
 .icon-breadcrumb {

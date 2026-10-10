@@ -14,7 +14,7 @@
             <li class="me-2 inline">
               <InertiaLink
                 :href="data.url.settings.index"
-                class="text-blue-500 hover:underline"
+                class="text-accent hover:underline"
               >
                 {{
                   $t('Settings')

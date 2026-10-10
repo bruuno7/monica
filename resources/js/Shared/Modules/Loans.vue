@@ -358,16 +358,16 @@ const toggle = (loan) => {
               <!-- settle -->
               <li
                 v-if="!loan.settled"
-                class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+                class="me-4 inline cursor-pointer text-accent hover:underline"
                 @click="toggle(loan)">
                 {{ $t('Settle') }}
               </li>
-              <li v-else class="me-4 inline cursor-pointer text-blue-500 hover:underline" @click="toggle(loan)">
+              <li v-else class="me-4 inline cursor-pointer text-accent hover:underline" @click="toggle(loan)">
                 {{ $t('Revert') }}
               </li>
 
               <!-- edit -->
-              <li class="me-4 inline cursor-pointer text-blue-500 hover:underline" @click="showEditLoanModal(loan)">
+              <li class="me-4 inline cursor-pointer text-accent hover:underline" @click="showEditLoanModal(loan)">
                 {{ $t('Edit') }}
               </li>
 

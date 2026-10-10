@@ -253,7 +253,7 @@ const destroy = () => {
               <div>
                 <a
                   :href="info.data_with_protocol"
-                  class="text-blue-500 hover:underline"
+                  class="text-accent hover:underline"
                   rel="noopener noreferrer"
                   target="_blank">
                   {{ info.data }}
@@ -266,7 +266,7 @@ const destroy = () => {
 
               <!-- actions -->
               <ul class="text-sm">
-                <li class="me-4 inline cursor-pointer text-blue-500 hover:underline" @click="showEditModal(info)">
+                <li class="me-4 inline cursor-pointer text-accent hover:underline" @click="showEditModal(info)">
                   {{ $t('Edit') }}
                 </li>
                 <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="deleting = info">

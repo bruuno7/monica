@@ -97,7 +97,7 @@ const reset = () => {
         </div>
 
         <div v-if="slice" class="border-t border-gray-200 p-2 dark:border-gray-700">
-          <p class="cursor-pointer text-sm text-blue-500 hover:underline" @click="reset()">
+          <p class="cursor-pointer text-sm text-accent hover:underline" @click="reset()">
             {{ $t('Or remove the slice') }}
           </p>
         </div>
@@ -108,7 +108,7 @@ const reset = () => {
     <p v-if="!slice" class="text-sm text-gray-600 dark:text-gray-400">{{ $t('Not set') }}</p>
 
     <div v-else>
-      <Link :href="slice.url.show" class="text-blue-500 hover:underline">
+      <Link :href="slice.url.show" class="text-accent hover:underline">
         {{ slice.name }}
       </Link>
     </div>

@@ -89,7 +89,7 @@ defineExpose({ focus: focus });
           'rounded-md shadow-xs',
           'bg-white dark:bg-slate-900 dark:text-gray-100 border-gray-300 dark:border-gray-700',
           'placeholder:text-gray-600 dark:placeholder:text-gray-400',
-          'focus:border-indigo-300 dark:focus:border-indigo-700 focus:ring-3 focus:ring-indigo-200 dark:focus:ring-indigo-800/50',
+          'focus:border-accent focus:ring-3 focus:ring-accent-soft',
           'disabled:bg-slate-50 dark:disabled:bg-slate-700',
           props.inputClass,
         ]"

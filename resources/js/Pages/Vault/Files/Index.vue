@@ -74,7 +74,7 @@
                     <span class="block truncate">{{ file.name }}</span>
 
                     <span class="ms-2">
-                      <span class="rounded-xs border bg-blue-50 px-1 py-0 font-mono text-xs text-blue-500">
+                      <span class="rounded-xs border bg-blue-50 px-1 py-0 font-mono text-xs text-accent">
                         {{ file.size }}
                       </span>
                     </span>
@@ -83,7 +83,7 @@
                   <!-- avatar -->
                   <div v-if="file.object.type === 'contact'" class="flex items-center">
                     <avatar :data="file.object.avatar" :class="'me-2 h-4 w-4 rounded-full'" />
-                    <InertiaLink :href="file.object.url.show" class="text-sm text-blue-500 hover:underline">
+                    <InertiaLink :href="file.object.url.show" class="text-sm text-accent hover:underline">
                       {{ file.object.name }}
                     </InertiaLink>
                   </div>
@@ -92,7 +92,7 @@
                 <!-- right part -->
                 <ul class="text-sm">
                   <li class="me-4 inline">
-                    <a :href="file.url.download" class="text-blue-500 hover:underline">{{ $t('Download') }}</a>
+                    <a :href="file.url.download" class="text-accent hover:underline">{{ $t('Download') }}</a>
                   </li>
                   <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(file)">
                     {{ $t('Delete') }}

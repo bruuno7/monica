@@ -18,7 +18,7 @@
     <div class="px-3 py-2">
       <!-- the contact information still exists in the system -->
       <span v-if="data.information.object">
-        <a :href="data.information.object.data" class="text-blue-500 hover:underline"
+        <a :href="data.information.object.data" class="text-accent hover:underline"
           >{{ data.information.object.label }}
         </a>
       </span>

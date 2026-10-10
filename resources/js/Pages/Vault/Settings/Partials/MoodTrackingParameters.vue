@@ -221,7 +221,7 @@ const updatePosition = (event) => {
             <!-- actions -->
             <ul class="text-sm">
               <li
-                class="inline cursor-pointer text-blue-500 hover:underline"
+                class="inline cursor-pointer text-accent hover:underline"
                 @click="renameMoodTrackingParameterModal(element)">
                 {{ $t('Rename') }}
               </li>

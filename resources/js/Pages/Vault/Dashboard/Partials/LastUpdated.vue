@@ -14,7 +14,7 @@
     <div v-for="contact in data" :key="contact.id" class="mb-2 flex items-center text-sm">
       <avatar :data="contact.avatar" :class="'me-2 h-5 w-5 rounded-full'" />
 
-      <InertiaLink :href="contact.url.show" class="text-blue-500 hover:underline">
+      <InertiaLink :href="contact.url.show" class="text-accent hover:underline">
         {{ contact.name }}
       </InertiaLink>
     </div>

@@ -115,7 +115,7 @@ const destroy = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.settings" class="text-blue-500 hover:underline">
+              <Link :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </Link>
             </li>
@@ -130,7 +130,7 @@ const destroy = () => {
               </svg>
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <Link :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </Link>
             </li>
@@ -245,7 +245,7 @@ const destroy = () => {
                 <!-- actions -->
                 <ul class="text-sm">
                   <li
-                    class="inline cursor-pointer text-blue-500 hover:underline"
+                    class="inline cursor-pointer text-accent hover:underline"
                     @click="updateAdressTypeModal(contactInformationType)">
                     {{ $t('Edit') }}
                   </li>

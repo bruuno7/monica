@@ -180,7 +180,7 @@ const destroy = (quickFact) => {
           </form>
         </li>
         <li v-if="!createQuickFactModalShown" class="ms-2 mt-1">
-          <span @click="showCreateQuickFactModal()" class="cursor-pointer text-blue-500 hover:underline">{{
+          <span @click="showCreateQuickFactModal()" class="cursor-pointer text-accent hover:underline">{{
             $t('+ add another')
           }}</span>
         </li>
@@ -191,7 +191,7 @@ const destroy = (quickFact) => {
         <p class="px-5 pb-2 text-center">
           {{ $t('There are no quick facts here yet.') }}
 
-          <span @click="showCreateQuickFactModal" class="cursor-pointer text-blue-500 hover:underline">{{
+          <span @click="showCreateQuickFactModal" class="cursor-pointer text-accent hover:underline">{{
             $t('Add one now')
           }}</span>
         </p>

@@ -230,7 +230,7 @@ const destroy = () => {
                 <a
                   :href="localTelegram.url.open"
                   target="_blank"
-                  class="text-blue-500 hover:underline"
+                  class="text-accent hover:underline"
                   rel="noopener noreferrer">
                   {{ $t('Open Telegram to validate your identity') }}
                 </a>
@@ -259,7 +259,7 @@ const destroy = () => {
             <!-- link to send a test notification, if not already sent -->
             <li
               v-if="!notificationSent"
-              class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+              class="me-4 inline cursor-pointer text-accent hover:underline"
               @click="sendTest">
               {{ $t('Send test') }}
             </li>
@@ -268,8 +268,8 @@ const destroy = () => {
             </li>
 
             <!-- view log -->
-            <li class="me-4 inline cursor-pointer text-blue-500 hover:underline">
-              <Link :href="localTelegram.url.logs" class="text-blue-500 hover:underline">
+            <li class="me-4 inline cursor-pointer text-accent hover:underline">
+              <Link :href="localTelegram.url.logs" class="text-accent hover:underline">
                 {{ $t('View log') }}
               </Link>
             </li>

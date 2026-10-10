@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <InertiaLink :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.contact" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.contact" class="text-accent hover:underline">
                 {{ $t('Profile of :name', { name: data.contact.name }) }}
               </InertiaLink>
             </li>
@@ -51,10 +51,10 @@
         <div class="special-grid grid grid-cols-1 gap-6 sm:grid-cols-3">
           <!-- left -->
           <div>
-            <div @click="showEditModal()" class="cursor-pointer text-blue-500 hover:underline">
+            <div @click="showEditModal()" class="cursor-pointer text-accent hover:underline">
               {{ $t('Rename') }}
             </div>
-            <div @click="destroy()" class="cursor-pointer text-blue-500 hover:underline">{{ $t('Delete') }}</div>
+            <div @click="destroy()" class="cursor-pointer text-accent hover:underline">{{ $t('Delete') }}</div>
           </div>
 
           <!-- right -->

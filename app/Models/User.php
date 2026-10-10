@@ -77,6 +77,35 @@ class User extends Authenticatable implements HasLocalePreference, MustVerifyEma
     public const CONTACT_SORT_ORDER_LAST_UPDATED = 'last_updated';
 
     /**
+     * Possible themes.
+     */
+    public const THEME_LIGHT = 'light';
+
+    public const THEME_DARK = 'dark';
+
+    public const THEME_SYSTEM = 'system';
+
+    public const THEMES = [
+        self::THEME_LIGHT,
+        self::THEME_DARK,
+        self::THEME_SYSTEM,
+    ];
+
+    /**
+     * Possible accent colors. Each one maps to a Tailwind palette in app.css.
+     */
+    public const ACCENT_COLOR_DEFAULT = 'blue';
+
+    public const ACCENT_COLORS = [
+        'blue',
+        'violet',
+        'rose',
+        'emerald',
+        'amber',
+        'teal',
+    ];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
@@ -100,6 +129,9 @@ class User extends Authenticatable implements HasLocalePreference, MustVerifyEma
         'locale',
         'help_shown',
         'contact_sort_order',
+        'theme',
+        'accent_color',
+        'oled_dark',
     ];
 
     /**
@@ -129,6 +161,9 @@ class User extends Authenticatable implements HasLocalePreference, MustVerifyEma
         'locale_ietf',
         'is_account_administrator',
         'timezone',
+        'theme',
+        'accent_color',
+        'oled_dark',
     ];
 
     /**
@@ -152,6 +187,7 @@ class User extends Authenticatable implements HasLocalePreference, MustVerifyEma
         'is_account_administrator' => 'boolean',
         'is_instance_administrator' => 'boolean',
         'help_shown' => 'boolean',
+        'oled_dark' => 'boolean',
     ];
 
     /**

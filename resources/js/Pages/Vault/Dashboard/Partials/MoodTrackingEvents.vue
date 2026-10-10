@@ -199,7 +199,7 @@ const submit = () => {
       <img src="/img/dashboard_blank_how_are_you.svg" :alt="$t('Reminders')" class="me-2 h-14 w-14" />
       <div class="flex flex-col px-5">
         <p class="mb-2"><span class="me-1">🎉</span> {{ $t('Your mood has been recorded!') }}</p>
-        <Link :href="data.url.history" class="text-center text-blue-500 hover:underline">{{ $t('View history') }}</Link>
+        <Link :href="data.url.history" class="text-center text-accent hover:underline">{{ $t('View history') }}</Link>
       </div>
     </div>
   </div>

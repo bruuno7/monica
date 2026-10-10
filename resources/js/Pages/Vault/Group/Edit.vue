@@ -55,7 +55,7 @@ const update = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.back" class="text-blue-500 hover:underline">
+              <Link :href="data.url.back" class="text-accent hover:underline">
                 {{ $t('Groups') }}
               </Link>
             </li>
@@ -70,7 +70,7 @@ const update = () => {
               </svg>
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.back" class="text-blue-500 hover:underline">{{ data.name }}</Link>
+              <Link :href="data.url.back" class="text-accent hover:underline">{{ data.name }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg

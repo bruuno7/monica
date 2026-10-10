@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <InertiaLink :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </InertiaLink>
             </li>
@@ -79,7 +79,7 @@
 
                 <!-- actions -->
                 <ul class="text-sm">
-                  <li class="inline cursor-pointer text-blue-500 hover:underline" @click="submit(template)">
+                  <li class="inline cursor-pointer text-accent hover:underline" @click="submit(template)">
                     {{ $t('Use') }}
                   </li>
                 </ul>

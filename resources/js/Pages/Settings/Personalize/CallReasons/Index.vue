@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -120,7 +120,7 @@
               <!-- actions -->
               <ul class="text-sm">
                 <li class="inline cursor-pointer" @click="renameCallReasonTypeModal(callReasonType)">
-                  <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                  <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                 </li>
                 <li
                   class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900"
@@ -172,7 +172,7 @@
                 <!-- actions -->
                 <ul class="text-sm">
                   <li class="inline cursor-pointer" @click="renameReasonModal(reason)">
-                    <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                    <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                   </li>
                   <li
                     class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900"
@@ -217,7 +217,7 @@
               v-if="createReasonModalId !== callReasonType.id"
               class="item-list border-b border-gray-200 px-5 py-2 ps-6 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
               <span
-                class="cursor-pointer text-sm text-blue-500 hover:underline"
+                class="cursor-pointer text-sm text-accent hover:underline"
                 @click="showReasonModal(callReasonType)"
                 >{{ $t('add a reason') }}</span
               >

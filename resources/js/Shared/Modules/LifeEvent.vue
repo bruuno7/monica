@@ -262,7 +262,7 @@ const toggleLifeEventVisibility = (lifeEvent) => {
               <span
                 @click="showAddLifeEventModalForTimelineEventId = timelineEvent.id"
                 v-if="showAddLifeEventModalForTimelineEventId !== timelineEvent.id"
-                class="cursor-pointer text-sm text-blue-500 hover:underline">
+                class="cursor-pointer text-sm text-accent hover:underline">
                 {{ $t('Add another life event') }}
               </span>
 
@@ -282,7 +282,7 @@ const toggleLifeEventVisibility = (lifeEvent) => {
         <div class="text-center" v-if="paginator.hasMorePages">
           <span
             @click="loadMore()"
-            class="cursor-pointer rounded-xs border border-gray-200 px-3 py-1 text-sm text-blue-500 hover:border-gray-500 dark:border-gray-700">
+            class="cursor-pointer rounded-xs border border-gray-200 px-3 py-1 text-sm text-accent hover:border-gray-500 dark:border-gray-700">
             {{ $t('Load previous entries') }}
           </span>
         </div>

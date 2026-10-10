@@ -33,7 +33,7 @@
             <div class="flex items-center text-sm">
               <avatar :data="reminder.contact.avatar" :class="'me-2 h-4 w-4 rounded-full'" />
 
-              <InertiaLink :href="reminder.contact.url.show" class="text-blue-500 hover:underline">
+              <InertiaLink :href="reminder.contact.url.show" class="text-accent hover:underline">
                 {{ reminder.contact.name }}
               </InertiaLink>
             </div>
@@ -58,7 +58,7 @@
     <div v-if="data.reminders.length > 0" class="text-center">
       <InertiaLink
         :href="data.url.index"
-        class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-blue-500 hover:border-gray-500 dark:border-gray-700">
+        class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-accent hover:border-gray-500 dark:border-gray-700">
         {{ $t('View all') }}
       </InertiaLink>
     </div>

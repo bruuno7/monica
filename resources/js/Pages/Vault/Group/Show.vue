@@ -47,7 +47,7 @@ const destroy = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.groups" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.groups" class="text-accent hover:underline">
                 {{ $t('Groups') }}
               </Link>
             </li>
@@ -118,7 +118,7 @@ const destroy = () => {
           <div class="flex items-center">
             <ul class="list">
               <li class="me-4 inline">
-                <Link :href="data.url.edit" class="text-blue-500 hover:underline">{{ $t('Edit') }}</Link>
+                <Link :href="data.url.edit" class="text-accent hover:underline">{{ $t('Edit') }}</Link>
               </li>
               <li class="inline" @click="deletingGroup = true">
                 <span class="inline cursor-pointer text-red-500 hover:text-red-900">{{ $t('Delete') }}</span>
@@ -142,7 +142,7 @@ const destroy = () => {
               class="rounded-lg border border-gray-200 bg-white p-3 text-center hover:bg-slate-50 dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-slate-800">
               <avatar :data="contact.avatar" :class="'inline-block h-14 w-14 rounded-full'" />
 
-              <Link :href="contact.url" class="text-blue-500 hover:underline">{{ contact.name }}</Link>
+              <Link :href="contact.url" class="text-accent hover:underline">{{ contact.name }}</Link>
 
               <span v-if="contact.age" class="ms-1 text-xs text-gray-500">({{ contact.age }})</span>
             </div>

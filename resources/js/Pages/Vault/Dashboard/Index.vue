@@ -65,10 +65,10 @@ const changeTab = (tab) => {
                   type="button"
                   :class="
                     currentTab === 'activity'
-                      ? 'bg-gray-100 text-blue-700 dark:bg-gray-900 dark:text-blue-300'
+                      ? 'bg-gray-100 text-accent dark:bg-gray-900 dark:text-blue-300'
                       : 'bg-white text-gray-900 dark:bg-gray-700 dark:text-white'
                   "
-                  class="inline-flex cursor-pointer items-center rounded-s-lg border-y border-s border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-blue-300 dark:focus:ring-blue-500">
+                  class="inline-flex cursor-pointer items-center rounded-s-lg border-y border-s border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-blue-500">
                   <SquareActivity class="me-2 h-4 w-4" />
                   {{ $t('Activity in this vault') }}
                 </button>
@@ -79,10 +79,10 @@ const changeTab = (tab) => {
                   type="button"
                   :class="
                     currentTab === 'life_events'
-                      ? 'bg-gray-100 text-blue-700 dark:bg-gray-900 dark:text-blue-300'
+                      ? 'bg-gray-100 text-accent dark:bg-gray-900 dark:text-blue-300'
                       : 'bg-white text-gray-900 dark:bg-gray-700 dark:text-white'
                   "
-                  class="inline-flex cursor-pointer items-center border-y border-e border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-blue-300 dark:focus:ring-blue-500">
+                  class="inline-flex cursor-pointer items-center border-y border-e border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-blue-500">
                   <Flame class="me-2 h-4 w-4" />
                   {{ $t('Your life events') }}
                 </button>
@@ -93,10 +93,10 @@ const changeTab = (tab) => {
                   type="button"
                   :class="
                     currentTab === 'life_metrics'
-                      ? 'bg-gray-100 text-blue-700 dark:bg-gray-900 dark:text-blue-300'
+                      ? 'bg-gray-100 text-accent dark:bg-gray-900 dark:text-blue-300'
                       : 'bg-white text-gray-900 dark:bg-gray-700 dark:text-white'
                   "
-                  class="inline-flex cursor-pointer items-center rounded-e-lg border-y border-e border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-blue-300 dark:focus:ring-blue-500">
+                  class="inline-flex cursor-pointer items-center rounded-e-lg border-y border-e border-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-blue-500">
                   <ChartSpline class="me-2 h-4 w-4" />
                   {{ $t('Life metrics') }}
                 </button>

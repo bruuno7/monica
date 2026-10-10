@@ -320,7 +320,7 @@ const destroy = (reminder) => {
             <!-- actions -->
             <ul class="text-sm">
               <li
-                class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+                class="me-4 inline cursor-pointer text-accent hover:underline"
                 @click="showEditReminderModal(reminder)">
                 {{ $t('Edit') }}
               </li>

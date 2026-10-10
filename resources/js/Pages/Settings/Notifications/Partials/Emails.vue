@@ -122,15 +122,12 @@
         <!-- actions when the email has been verified -->
         <ul v-if="email.verified_at" class="text-sm">
           <!-- activate/deactivate -->
-          <li
-            v-if="email.active"
-            class="me-4 inline cursor-pointer text-blue-500 hover:underline"
-            @click="toggle(email)">
+          <li v-if="email.active" class="me-4 inline cursor-pointer text-accent hover:underline" @click="toggle(email)">
             {{ $t('Deactivate') }}
           </li>
           <li
             v-if="!email.active"
-            class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+            class="me-4 inline cursor-pointer text-accent hover:underline"
             @click="toggle(email)">
             {{ $t('Activate') }}
           </li>
@@ -138,7 +135,7 @@
           <!-- link to send a test email, if not already sent -->
           <li
             v-if="testEmailSentId !== email.id"
-            class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+            class="me-4 inline cursor-pointer text-accent hover:underline"
             @click="sendTest(email)">
             {{ $t('Send test') }}
           </li>
@@ -149,8 +146,8 @@
           </li>
 
           <!-- view log -->
-          <li class="me-4 inline cursor-pointer text-blue-500 hover:underline">
-            <InertiaLink :href="email.url.logs" class="text-blue-500 hover:underline">
+          <li class="me-4 inline cursor-pointer text-accent hover:underline">
+            <InertiaLink :href="email.url.logs" class="text-accent hover:underline">
               {{ $t('View log') }}
             </InertiaLink>
           </li>

@@ -16,17 +16,17 @@ defineProps({
         <div class="mb-12 rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-900">
           <ul>
             <li class="mb-2 flex justify-start">
-              <Link :href="data.url.addresses" class="text-blue-500 hover:underline">
+              <Link :href="data.url.addresses" class="text-accent hover:underline">
                 {{ $t('List of addresses of the contacts in the vault') }}
               </Link>
             </li>
             <li class="mb-2 flex justify-start">
-              <Link :href="data.url.mood_tracking_events" class="text-blue-500 hover:underline">
+              <Link :href="data.url.mood_tracking_events" class="text-accent hover:underline">
                 {{ $t('Mood tracking events') }}
               </Link>
             </li>
             <li class="flex justify-start">
-              <Link :href="data.url.important_date_summary" class="text-blue-500 hover:underline">
+              <Link :href="data.url.important_date_summary" class="text-accent hover:underline">
                 {{ $t('Important date summary') }}
               </Link>
             </li>

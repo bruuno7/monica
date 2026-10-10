@@ -22,7 +22,7 @@ defineProps({
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="route('settings.index')" class="text-blue-500 hover:underline">
+              <Link :href="route('settings.index')" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </Link>
             </li>

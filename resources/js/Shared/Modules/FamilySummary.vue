@@ -21,7 +21,7 @@ defineProps({
           <Link
             v-if="relationship.contact.url.show"
             :href="relationship.contact.url.show"
-            class="text-blue-500 hover:underline">
+            class="text-accent hover:underline">
             {{ relationship.contact.name }}
           </Link>
           <span v-else>{{ relationship.contact.name }}</span>
@@ -43,7 +43,7 @@ defineProps({
           <Link
             v-if="relationship.contact.url.show"
             :href="relationship.contact.url.show"
-            class="text-blue-500 hover:underline">
+            class="text-accent hover:underline">
             {{ relationship.contact.name }}
           </Link>
           <span v-else>{{ relationship.contact.name }}</span>

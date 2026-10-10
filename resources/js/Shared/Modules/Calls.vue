@@ -317,7 +317,7 @@ const destroy = (call) => {
             id="types"
             v-model="form.call_reason_id"
             name="types"
-            class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-indigo-300 focus:outline-hidden focus:ring-3 focus:ring-indigo-200/50 dark:bg-gray-900 sm:text-sm">
+            class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-accent focus:outline-hidden focus:ring-3 focus:ring-accent-soft dark:bg-gray-900 sm:text-sm">
             <optgroup
               v-for="callReasonType in data.call_reason_types"
               :key="callReasonType.id"
@@ -339,7 +339,7 @@ const destroy = (call) => {
               :value="emotion.id"
               name="emotion"
               type="radio"
-              class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+              class="h-4 w-4 border-gray-300 text-accent focus:ring-accent" />
             <label :for="emotion.type" class="ms-2 block cursor-pointer font-medium text-gray-700 dark:text-gray-300">
               {{ emotion.name }}
             </label>
@@ -569,7 +569,7 @@ const destroy = (call) => {
                 id="types"
                 v-model="form.call_reason_id"
                 name="types"
-                class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-indigo-300 focus:outline-hidden focus:ring-3 focus:ring-indigo-200/50 dark:bg-gray-900 sm:text-sm">
+                class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-accent focus:outline-hidden focus:ring-3 focus:ring-accent-soft dark:bg-gray-900 sm:text-sm">
                 <optgroup
                   v-for="callReasonType in data.call_reason_types"
                   :key="callReasonType.id"
@@ -591,7 +591,7 @@ const destroy = (call) => {
                   :value="emotion.id"
                   name="emotion"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                  class="h-4 w-4 border-gray-300 text-accent focus:ring-accent" />
                 <label
                   :for="emotion.type"
                   class="ms-2 block cursor-pointer font-medium text-gray-700 dark:text-gray-300">

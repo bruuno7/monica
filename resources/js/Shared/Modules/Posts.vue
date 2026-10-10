@@ -27,12 +27,12 @@ defineProps({
           v-for="post in data"
           :key="post.id"
           class="item-list border-b border-gray-200 px-3 py-2 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
-          <Link :href="post.url.show" class="mb-2 block text-blue-500 hover:underline">{{ post.title }}</Link>
+          <Link :href="post.url.show" class="mb-2 block text-accent hover:underline">{{ post.title }}</Link>
           <div class="flex items-center text-sm">
             <!-- journal -->
             <p class="me-2">
               {{ $t('in') }}
-              <Link :href="post.journal.url.show" class="text-blue-500 hover:underline">{{ post.journal.name }}</Link>
+              <Link :href="post.journal.url.show" class="text-accent hover:underline">{{ post.journal.name }}</Link>
             </p>
 
             <!-- date -->

@@ -280,7 +280,7 @@ const destroyLifeEventType = (lifeEventType) => {
                 <!-- actions -->
                 <ul class="text-sm">
                   <li class="inline cursor-pointer" @click="renameLifeEventCategoryModal(element)">
-                    <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                    <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                   </li>
                   <li class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(element)">
                     {{ $t('Delete') }}
@@ -329,7 +329,7 @@ const destroyLifeEventType = (lifeEventType) => {
                           <!-- actions -->
                           <ul class="text-sm">
                             <li class="inline cursor-pointer" @click="renameLifeEventTypeModal(element2)">
-                              <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                              <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                             </li>
                             <li
                               class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900"
@@ -377,7 +377,7 @@ const destroyLifeEventType = (lifeEventType) => {
                     !createLifeEventTypeModalShown &&
                     lifeEventCategoryId !== element.id
                   "
-                  class="inline cursor-pointer text-sm text-blue-500 hover:underline"
+                  class="inline cursor-pointer text-sm text-accent hover:underline"
                   @click="showCreateLifeEventTypeModal(element)">
                   {{ $t('add a life event type') }}
                 </span>
@@ -430,7 +430,7 @@ const destroyLifeEventType = (lifeEventType) => {
                     {{ $t('No life event types yet.') }}
 
                     <span
-                      class="block cursor-pointer text-sm text-blue-500 hover:underline"
+                      class="block cursor-pointer text-sm text-accent hover:underline"
                       @click="showCreateLifeEventTypeModal(element)"
                       >{{ $t('add a life event type') }}</span
                     >

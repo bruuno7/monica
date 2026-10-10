@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -34,6 +34,8 @@
     <main class="relative sm:mt-20">
       <div class="mx-auto max-w-3xl px-2 py-2 sm:px-6 sm:py-6 lg:px-8">
         <help-preference :data="data.help" />
+
+        <theme :data="data.theme" />
 
         <locale :data="data.locale" />
 
@@ -64,11 +66,13 @@ import Timezone from '@/Pages/Settings/Preferences/Partials/Timezone.vue';
 import Maps from '@/Pages/Settings/Preferences/Partials/Maps.vue';
 import Locale from '@/Pages/Settings/Preferences/Partials/Locale.vue';
 import HelpPreference from '@/Pages/Settings/Preferences/Partials/HelpPreference.vue';
+import Theme from '@/Pages/Settings/Preferences/Partials/Theme.vue';
 
 export default {
   components: {
     InertiaLink: Link,
     Layout,
+    Theme,
     NameOrder,
     DateFormat,
     Timezone,

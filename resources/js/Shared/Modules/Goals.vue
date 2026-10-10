@@ -49,7 +49,7 @@
             </div>
 
             <div>
-              <InertiaLink :href="goal.url.show" class="text-sm text-blue-500 hover:underline">
+              <InertiaLink :href="goal.url.show" class="text-sm text-accent hover:underline">
                 {{ $t('View details') }}
               </InertiaLink>
             </div>

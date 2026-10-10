@@ -49,7 +49,7 @@
               <li v-if="template.is_default">
                 {{ $t('Current default') }}
               </li>
-              <li v-else class="inline cursor-pointer text-blue-500 hover:underline" @click="update(template)">
+              <li v-else class="inline cursor-pointer text-accent hover:underline" @click="update(template)">
                 {{ $t('Set as default') }}
               </li>
             </ul>

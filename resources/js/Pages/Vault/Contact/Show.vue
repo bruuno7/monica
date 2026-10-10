@@ -177,7 +177,7 @@ const navigateToSelected = () => {
             {{ $t('You are here:') }}
           </div>
           <div class="inline">
-            <Link :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+            <Link :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
               {{ $t('Contacts') }}
             </Link>
           </div>
@@ -227,7 +227,7 @@ const navigateToSelected = () => {
             <ul class="text-xs">
               <!-- remove avatar -->
               <li v-if="data.avatar.hasFile" class="mb-2">
-                <span @click.prevent="destroyAvatar()" class="cursor-pointer text-blue-500 hover:underline">
+                <span @click.prevent="destroyAvatar()" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Remove avatar') }}
                 </span>
               </li>
@@ -242,42 +242,42 @@ const navigateToSelected = () => {
                   :preview-step="false"
                   @success="onSuccess"
                   @error="onError">
-                  <span class="cursor-pointer text-blue-500 hover:underline"> {{ $t('Upload photo as avatar') }} </span>
+                  <span class="cursor-pointer text-accent hover:underline"> {{ $t('Upload photo as avatar') }} </span>
                 </Uploadcare>
               </li>
               <!-- archive contact -->
               <li v-if="data.listed && data.options.can_be_archived" class="mb-2">
-                <span class="cursor-pointer text-blue-500 hover:underline" @click="togglingArchive = true">
+                <span class="cursor-pointer text-accent hover:underline" @click="togglingArchive = true">
                   {{ $t('Archive contact') }}
                 </span>
               </li>
               <!-- unarchive contact -->
               <li v-if="!data.listed" class="mb-2">
-                <span class="cursor-pointer text-blue-500 hover:underline" @click="togglingArchive = true">
+                <span class="cursor-pointer text-accent hover:underline" @click="togglingArchive = true">
                   {{ $t('Unarchive contact') }}
                 </span>
               </li>
               <!-- change template -->
               <li class="mb-2">
-                <Link :href="data.url.update_template" class="cursor-pointer text-blue-500 hover:underline">
+                <Link :href="data.url.update_template" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Change template') }}
                 </Link>
               </li>
               <!-- move contact to another vault -->
               <li class="mb-2">
-                <Link :href="data.url.move_contact" class="cursor-pointer text-blue-500 hover:underline">
+                <Link :href="data.url.move_contact" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Move contact') }}
                 </Link>
               </li>
               <!-- download as vcard -->
               <li class="mb-2">
-                <Link @click.prevent="download()" class="cursor-pointer text-blue-500 hover:underline">
+                <Link @click.prevent="download()" class="cursor-pointer text-accent hover:underline">
                   {{ $t('Download as vCard') }}
                 </Link>
               </li>
               <!-- delete contact -->
               <li v-if="data.options.can_be_deleted">
-                <span class="cursor-pointer text-blue-500 hover:underline" @click="deletingContact = true">
+                <span class="cursor-pointer text-accent hover:underline" @click="deletingContact = true">
                   {{ $t('Delete contact') }}
                 </span>
               </li>
@@ -301,7 +301,7 @@ const navigateToSelected = () => {
                     v-for="group in data.group_summary_information"
                     :key="group.id"
                     class="group-list-item me-2 inline">
-                    <Link :href="group.url.show" class="text-blue-500 hover:underline">
+                    <Link :href="group.url.show" class="text-accent hover:underline">
                       {{ group.name }}
                     </Link>
                   </li>

@@ -56,7 +56,7 @@ const showFull = (note) => {
         </div>
         <div v-if="!note.show_full_content" class="p-3">
           {{ note.body_excerpt }}
-          <span class="cursor-pointer text-blue-500 hover:underline" @click="showFull(note)">{{ $t('View all') }}</span>
+          <span class="cursor-pointer text-accent hover:underline" @click="showFull(note)">{{ $t('View all') }}</span>
         </div>
         <div v-else class="p-3">
           {{ note.body }}
@@ -94,7 +94,7 @@ const showFull = (note) => {
                 stroke-width="2"
                 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <Link :href="note.contact.url" class="text-blue-500 hover:underline">
+            <Link :href="note.contact.url" class="text-accent hover:underline">
               {{ note.contact.name }}
             </Link>
           </div>

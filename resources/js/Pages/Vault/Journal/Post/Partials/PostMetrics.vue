@@ -104,20 +104,20 @@ const destroy = (journalMetric, postMetric) => {
         <li
           @click="showAddMetricModal(journalMetric)"
           v-if="!addModalShown && editModeJournalMetricId !== journalMetric.id"
-          class="mb-6 me-3 inline cursor-pointer text-sm text-blue-500 hover:underline">
+          class="mb-6 me-3 inline cursor-pointer text-sm text-accent hover:underline">
           {{ $t('add a new metric') }}
         </li>
         <li
           @click="showEditMetricModal(journalMetric)"
           v-if="!addModalShown && journalMetric.post_metrics.length > 0 && editModeJournalMetricId !== journalMetric.id"
           class="mb-6 inline cursor-pointer text-sm">
-          <span class="text-blue-500 hover:underline">{{ $t('edit') }}</span>
+          <span class="text-accent hover:underline">{{ $t('edit') }}</span>
         </li>
         <li
           @click="editModeJournalMetricId = 0"
           v-if="editModeJournalMetricId === journalMetric.id"
           class="mb-6 inline cursor-pointer text-sm">
-          <span class="text-blue-500 hover:underline">{{ $t('close edit mode') }}</span>
+          <span class="text-accent hover:underline">{{ $t('close edit mode') }}</span>
         </li>
       </ul>
 

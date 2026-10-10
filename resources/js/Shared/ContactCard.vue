@@ -47,7 +47,7 @@ defineProps({
 
               <ul>
                 <li v-for="group in contact.groups" :key="group.id" class="group-list-item">
-                  <Link class="text-blue-500 hover:underline">
+                  <Link class="text-accent hover:underline">
                     {{ group.name }}
                   </Link>
                 </li>
@@ -71,7 +71,7 @@ defineProps({
         </div>
 
         <!-- name -->
-        <Link v-if="displayName" class="text-blue-500 hover:underline" :href="contact.url">{{ contact.name }}</Link>
+        <Link v-if="displayName" class="text-accent hover:underline" :href="contact.url">{{ contact.name }}</Link>
       </div>
     </a-popover>
   </div>

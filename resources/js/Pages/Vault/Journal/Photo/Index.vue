@@ -19,7 +19,7 @@ defineProps({
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -52,8 +52,8 @@ defineProps({
           <div class="mb-8 inline-flex rounded-md shadow-xs">
             <Link
               :href="data.url.show"
-              :class="{ 'bg-gray-100 text-blue-700 dark:bg-gray-400 dark:font-bold': defaultTab === 'activity' }"
-              class="inline-flex items-center rounded-s-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+              :class="{ 'bg-gray-100 text-accent dark:bg-gray-400 dark:font-bold': defaultTab === 'activity' }"
+              class="inline-flex items-center rounded-s-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,7 +71,7 @@ defineProps({
             </Link>
 
             <Link
-              class="inline-flex items-center rounded-e-md border-y border-e border-gray-200 bg-gray-100 bg-white px-4 py-2 text-sm font-medium text-blue-700 text-gray-900 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-400 dark:bg-gray-700 dark:font-bold dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+              class="inline-flex items-center rounded-e-md border-y border-e border-gray-200 bg-gray-100 bg-white px-4 py-2 text-sm font-medium text-accent text-gray-900 hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-400 dark:bg-gray-700 dark:font-bold dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

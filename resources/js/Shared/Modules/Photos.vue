@@ -48,7 +48,7 @@
       <div class="text-center">
         <InertiaLink
           :href="data.url.index"
-          class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-blue-500 hover:border-gray-500 dark:border-gray-700">
+          class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-accent hover:border-gray-500 dark:border-gray-700">
           {{ $t('View all') }}
         </InertiaLink>
       </div>

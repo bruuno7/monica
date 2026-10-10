@@ -129,7 +129,7 @@
             <!-- actions -->
             <ul v-if="user.id !== layoutData.user.id" class="text-sm">
               <li class="me-4 inline cursor-pointer" @click="showChangePermissionModal(user)">
-                <span class="text-blue-500 hover:underline">{{ $t('Change permission') }}</span>
+                <span class="text-accent hover:underline">{{ $t('Change permission') }}</span>
               </li>
               <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(user)">
                 {{ $t('Remove') }}

@@ -40,7 +40,7 @@ const submit = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -55,7 +55,7 @@ const submit = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.journal.url.show" class="text-blue-500 hover:underline">{{ data.journal.name }}</Link>
+              <Link :href="data.journal.url.show" class="text-accent hover:underline">{{ data.journal.name }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -68,9 +68,7 @@ const submit = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.url.slices_index" class="text-blue-500 hover:underline">{{
-                $t('Slices of life')
-              }}</Link>
+              <Link :href="data.url.slices_index" class="text-accent hover:underline">{{ $t('Slices of life') }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -83,7 +81,7 @@ const submit = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.slice.url.show" class="text-blue-500 hover:underline">{{ data.slice.name }}</Link>
+              <Link :href="data.slice.url.show" class="text-accent hover:underline">{{ data.slice.name }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg

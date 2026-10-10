@@ -25,7 +25,7 @@ defineProps({
         </li>
 
         <li class="inline" :class="{ 'ms-2': index > 0 }">
-          <Link v-if="item.url" :href="item.url" class="text-blue-500 hover:underline">
+          <Link v-if="item.url" :href="item.url" class="text-accent hover:underline">
             {{ item.name }}
           </Link>
           <template v-else>

@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -151,7 +151,7 @@
                     <!-- actions -->
                     <ul class="text-sm">
                       <li class="inline cursor-pointer" @click="renameGroupTypeModal(element)">
-                        <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                        <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                       </li>
                       <li class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(element)">
                         {{ $t('Delete') }}
@@ -200,7 +200,7 @@
                               <!-- actions -->
                               <ul class="text-sm">
                                 <li class="inline cursor-pointer" @click="renameRoleModal(element2)">
-                                  <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                                  <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                                 </li>
                                 <li
                                   class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900"
@@ -255,7 +255,7 @@
                       v-if="
                         element.group_type_roles.length !== 0 && !createRoleModalShown && roleGroupTypeId !== element.id
                       "
-                      class="inline cursor-pointer text-sm text-blue-500 hover:underline"
+                      class="inline cursor-pointer text-sm text-accent hover:underline"
                       @click="showCreateRoleModal(element)"
                       >{{ $t('add a role') }}</span
                     >
@@ -305,7 +305,7 @@
                       <p class="p-5 text-center">
                         {{ $t('No roles yet.') }}
                         <span
-                          class="block cursor-pointer text-sm text-blue-500 hover:underline"
+                          class="block cursor-pointer text-sm text-accent hover:underline"
                           @click="showCreateRoleModal(element)"
                           >{{ $t('add a role') }}</span
                         >

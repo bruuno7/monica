@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <InertiaLink :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.show" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.show" class="text-accent hover:underline">
                 {{ $t('Profile of :name', { name: data.contact.name }) }}
               </InertiaLink>
             </li>
@@ -39,7 +39,7 @@
               </svg>
             </li>
             <li class="inline">
-              <InertiaLink :href="data.url.index" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.index" class="text-accent hover:underline">
                 {{ $t('All the photos') }}
               </InertiaLink>
             </li>

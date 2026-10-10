@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <InertiaLink :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.contact" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.contact" class="text-accent hover:underline">
                 {{ $t('Profile of :name', { name: data.contact.name }) }}
               </InertiaLink>
             </li>
@@ -63,7 +63,7 @@
               id="types"
               v-model="form.relationship_type_id"
               name="types"
-              class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-indigo-300 focus:outline-hidden focus:ring-3 focus:ring-indigo-200/50 dark:bg-gray-900 sm:text-sm"
+              class="w-full rounded-md border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-accent focus:outline-hidden focus:ring-3 focus:ring-accent-soft dark:bg-gray-900 sm:text-sm"
               @update:model-value="load"
               :data="fromRelationshipOptions" />
           </div>

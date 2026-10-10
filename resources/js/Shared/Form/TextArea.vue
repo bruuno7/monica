@@ -80,7 +80,7 @@ const charactersLeft = computed(() => {
 const localTextAreaClasses = computed(() => [
   'rounded-md shadow-xs',
   'bg-white dark:bg-slate-900 border-gray-300 dark:border-gray-700',
-  'focus:border-indigo-300 dark:focus:border-indigo-700 focus:ring-3 focus:ring-indigo-200 dark:focus:ring-indigo-800/50',
+  'focus:border-accent focus:ring-3 focus:ring-accent-soft',
   props.textareaClass,
 ]);
 
@@ -140,7 +140,7 @@ defineExpose({
         target="_blank"
         lang="en"
         rel="noopener noreferrer"
-        class="ms-1 text-blue-500 hover:underline">
+        class="ms-1 text-accent hover:underline">
         {{ $t('(Help)') }}
       </a>
     </p>

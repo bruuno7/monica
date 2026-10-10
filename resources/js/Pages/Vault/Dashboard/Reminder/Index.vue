@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="layoutData.vault.url.dashboard" class="text-blue-500 hover:underline">
+              <InertiaLink :href="layoutData.vault.url.dashboard" class="text-accent hover:underline">
                 {{ $t('Dashboard') }}
               </InertiaLink>
             </li>
@@ -92,7 +92,7 @@
                     :data="reminder.contact.avatar"
                     :class="'me-2 h-4 w-4 rounded-full ring-2 ring-white dark:ring-gray-900'" />
 
-                  <InertiaLink :href="reminder.contact.url.show" class="text-blue-500 hover:underline">
+                  <InertiaLink :href="reminder.contact.url.show" class="text-accent hover:underline">
                     {{ reminder.contact.name }}
                   </InertiaLink>
                 </div>

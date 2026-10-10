@@ -29,7 +29,7 @@ const move = (vault) => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.contacts" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.contacts" class="text-accent hover:underline">
                 {{ $t('Contacts') }}
               </Link>
             </li>
@@ -90,7 +90,7 @@ const move = (vault) => {
 
                 <!-- actions -->
                 <ul class="text-sm">
-                  <li class="inline cursor-pointer text-blue-500 hover:underline" @click="move(vault)">
+                  <li class="inline cursor-pointer text-accent hover:underline" @click="move(vault)">
                     {{ $t('Choose') }}
                   </li>
                 </ul>

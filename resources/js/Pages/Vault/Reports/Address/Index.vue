@@ -19,9 +19,7 @@ defineProps({
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.reports" class="text-blue-500 hover:underline">{{
-                $t('Reports')
-              }}</Link>
+              <Link :href="layoutData.vault.url.reports" class="text-accent hover:underline">{{ $t('Reports') }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -49,7 +47,7 @@ defineProps({
             <!-- list of countries -->
             <ul v-if="data.countries.length > 0">
               <li v-for="country in data.countries" :key="country.id">
-                <Link :href="country.url.index" class="text-blue-500 hover:underline">{{ country.name }}</Link> ({{
+                <Link :href="country.url.index" class="text-accent hover:underline">{{ country.name }}</Link> ({{
                   country.contacts
                 }})
               </li>
@@ -70,7 +68,7 @@ defineProps({
             <!-- list of cities -->
             <ul v-if="data.cities.length > 0">
               <li v-for="city in data.cities" :key="city.id">
-                <Link :href="city.url.index" class="text-blue-500 hover:underline">{{ city.name }}</Link> ({{
+                <Link :href="city.url.index" class="text-accent hover:underline">{{ city.name }}</Link> ({{
                   city.contacts
                 }})
               </li>

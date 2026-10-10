@@ -43,7 +43,7 @@ const helpDocumentation = () => {
   return msg
     .replace(
       '<link>',
-      `<a href="${link}" lang="en" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">`,
+      `<a href="${link}" lang="en" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">`,
     )
     .replace('</link>', '</a>');
 };

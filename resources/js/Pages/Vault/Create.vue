@@ -8,7 +8,7 @@
             {{ $t('You are here:') }}
           </div>
           <div class="inline">
-            <Link :href="data.url.back" class="text-blue-500 hover:underline">
+            <Link :href="data.url.back" class="text-accent hover:underline">
               {{ $t('All the vaults') }}
             </Link>
           </div>
@@ -60,7 +60,7 @@
             <InertiaLink
               :href="data.url.back"
               :text="$t('Cancel')"
-              class="cursor-pointer inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1 font-semibold text-gray-700 hover:shadow-xs transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25" />
+              class="cursor-pointer inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1 font-semibold text-gray-700 hover:shadow-xs transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-25" />
 
             <primary-button
               :href="'data.url.vault.create'"

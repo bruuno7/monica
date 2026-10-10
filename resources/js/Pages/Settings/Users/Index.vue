@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings.index" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings.index" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -102,7 +102,7 @@
               <!-- actions -->
               <ul v-if="!user.is_logged_user" class="text-sm">
                 <li class="me-4 inline cursor-pointer" @click="showEditModal(user)">
-                  <span class="text-blue-500 hover:underline">{{ $t('Edit') }}</span>
+                  <span class="text-accent hover:underline">{{ $t('Edit') }}</span>
                 </li>
                 <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(user)">
                   {{ $t('Delete') }}

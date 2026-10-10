@@ -374,11 +374,11 @@ const destroy = () => {
             <!-- actions -->
             <ul class="text-sm">
               <li class="me-2 inline">
-                <a :href="address.url.show" target="_blank" class="me-2 text-sm text-blue-500 hover:underline">{{
+                <a :href="address.url.show" target="_blank" class="me-2 text-sm text-accent hover:underline">{{
                   $t('View on map')
                 }}</a>
               </li>
-              <li class="inline cursor-pointer text-blue-500 hover:underline" @click="showEditAddressModal(address)">
+              <li class="inline cursor-pointer text-accent hover:underline" @click="showEditAddressModal(address)">
                 {{ $t('Edit') }}
               </li>
               <li
@@ -521,7 +521,7 @@ const destroy = () => {
       <!-- view past addresses link -->
       <p
         v-if="localInactiveAddresses.length > 0"
-        class="mx-4 mb-2 cursor-pointer text-xs text-blue-500 hover:underline"
+        class="mx-4 mb-2 cursor-pointer text-xs text-accent hover:underline"
         @click="toggleInactiveAdresses">
         {{ $t('Previous addresses') }} ({{ localInactiveAddresses.length }})
       </p>
@@ -557,11 +557,11 @@ const destroy = () => {
             <!-- actions -->
             <ul class="text-sm">
               <li class="me-2 inline">
-                <a :href="address.url.show" target="_blank" class="me-2 text-sm text-blue-500 hover:underline">{{
+                <a :href="address.url.show" target="_blank" class="me-2 text-sm text-accent hover:underline">{{
                   $t('View on map')
                 }}</a>
               </li>
-              <li class="inline cursor-pointer text-blue-500 hover:underline" @click="showEditAddressModal(address)">
+              <li class="inline cursor-pointer text-accent hover:underline" @click="showEditAddressModal(address)">
                 {{ $t('Edit') }}
               </li>
               <li class="ms-4 inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(address)">

@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -151,7 +151,7 @@
                     <!-- actions -->
                     <ul class="text-sm">
                       <li class="inline cursor-pointer" @click="renamePostTemplateModal(element)">
-                        <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                        <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                       </li>
                       <li
                         v-if="element.can_be_deleted"
@@ -203,9 +203,9 @@
                               <!-- actions -->
                               <ul class="text-sm">
                                 <li
-                                  class="inline cursor-pointer text-blue-500 hover:underline"
+                                  class="inline cursor-pointer text-accent hover:underline"
                                   @click="renameSectionModal(element2)">
-                                  <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                                  <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                                 </li>
                                 <li
                                   v-if="element.can_be_deleted"
@@ -254,7 +254,7 @@
                         !createSectionModalShown &&
                         postTemplateId !== element.id
                       "
-                      class="inline cursor-pointer text-sm text-blue-500 hover:underline"
+                      class="inline cursor-pointer text-sm text-accent hover:underline"
                       @click="showCreateSectionModal(element)"
                       >{{ $t('add a section') }}</span
                     >
@@ -307,7 +307,7 @@
                         {{ $t('No roles yet.') }}
 
                         <span
-                          class="block cursor-pointer text-sm text-blue-500 hover:underline"
+                          class="block cursor-pointer text-sm text-accent hover:underline"
                           @click="showCreateSectionModal(element)"
                           >{{ $t('add a section') }}</span
                         >

@@ -38,7 +38,7 @@ const update = () => {
               <ul v-if="data.labels.length > 0">
                 <li class="mb-1">
                   <div v-if="data.current_label">
-                    <Link :href="data.url.contact.index" class="text-blue-500 hover:underline">
+                    <Link :href="data.url.contact.index" class="text-accent hover:underline">
                       {{ $t('View all') }}
                     </Link>
                   </div>
@@ -48,7 +48,7 @@ const update = () => {
                 </li>
                 <li v-for="label in data.labels" :key="label.id" class="mb-1">
                   <div v-if="label.id !== data.current_label">
-                    <Link :href="label.url.show" class="text-blue-500 hover:underline">
+                    <Link :href="label.url.show" class="text-accent hover:underline">
                       {{ label.name }}
                     </Link>
                     <span class="text-sm text-gray-500">({{ label.count }})</span>
@@ -97,7 +97,7 @@ const update = () => {
                 class="flex items-center border-b border-gray-200 px-5 py-2 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
                 <avatar :data="contact.avatar" :class="'me-2 h-5 w-5 rounded-full'" />
 
-                <Link :href="contact.url.show" class="text-blue-500 hover:underline">
+                <Link :href="contact.url.show" class="text-accent hover:underline">
                   {{ contact.name }}
                 </Link>
               </li>

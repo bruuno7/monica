@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -139,7 +139,7 @@
               <!-- actions -->
               <ul class="text-sm">
                 <li class="inline cursor-pointer" @click="renameRelationshipGroupTypeModal(groupType)">
-                  <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                  <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                 </li>
                 <li
                   v-if="groupType.can_be_deleted"
@@ -211,7 +211,7 @@
                 <!-- actions -->
                 <ul class="text-sm">
                   <li class="inline cursor-pointer" @click="renameRelationTypeModal(type)">
-                    <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                    <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
                   </li>
                   <li
                     v-if="type.can_be_deleted"
@@ -272,7 +272,7 @@
               v-if="createRelationshipTypeModalId !== groupType.id"
               class="item-list border-b border-gray-200 px-5 py-2 ps-6 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
               <span
-                class="cursor-pointer text-sm text-blue-500 hover:underline"
+                class="cursor-pointer text-sm text-accent hover:underline"
                 @click="showRelationshipTypeModal(groupType)"
                 >{{ $t('Add a relationship type') }}</span
               >

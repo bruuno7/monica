@@ -161,7 +161,7 @@ const destroy = (task) => {
     <!-- button to display completed tasks -->
     <p
       v-if="data.completed_tasks_count > 0 && !showCompletedTasks"
-      class="mx-4 mb-6 cursor-pointer text-xs text-blue-500 hover:underline"
+      class="mx-4 mb-6 cursor-pointer text-xs text-accent hover:underline"
       @click="getCompleted()">
       {{ $t('Show completed tasks (:count)', { count: data.completed_tasks_count }) }}
     </p>

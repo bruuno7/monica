@@ -213,7 +213,7 @@ const store = () => {
                 @click="chooseType(lifeEventType)"
                 class="item-list flex cursor-pointer justify-between border-b border-gray-200 px-3 py-1 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
                 <span>{{ lifeEventType.label }}</span>
-                <span class="text-sm text-blue-500 hover:underline">{{ $t('Choose') }}</span>
+                <span class="text-sm text-accent hover:underline">{{ $t('Choose') }}</span>
               </li>
             </ul>
           </div>
@@ -233,7 +233,7 @@ const store = () => {
           </span>
         </div>
 
-        <p @click="resetType()" class="cursor-pointer text-sm text-blue-500 hover:underline">{{ $t('Change') }}</p>
+        <p @click="resetType()" class="cursor-pointer text-sm text-accent hover:underline">{{ $t('Change') }}</p>
       </div>
 
       <!-- date of the event -->
@@ -245,7 +245,7 @@ const store = () => {
             {{ lifeEvent ? lifeEvent.happened_at : data.current_date_human_format }}
           </div>
 
-          <p @click="editDate = true" class="cursor-pointer text-sm text-blue-500 hover:underline">
+          <p @click="editDate = true" class="cursor-pointer text-sm text-accent hover:underline">
             {{ $t('Change') }}
           </p>
         </div>

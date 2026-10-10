@@ -160,7 +160,7 @@ const destroy = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -175,7 +175,7 @@ const destroy = () => {
               </svg>
             </li>
             <li class="inline">
-              <Link :href="data.url.back" class="text-blue-500 hover:underline">
+              <Link :href="data.url.back" class="text-accent hover:underline">
                 {{ data.journal.name }}
               </Link>
             </li>
@@ -190,7 +190,7 @@ const destroy = () => {
               </svg>
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.show" class="text-blue-500 hover:underline">
+              <Link :href="data.url.show" class="text-accent hover:underline">
                 {{ data.title }}
               </Link>
             </li>

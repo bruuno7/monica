@@ -9,7 +9,7 @@
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.settings" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.settings" class="text-accent hover:underline">
                 {{ $t('Settings') }}
               </InertiaLink>
             </li>
@@ -24,7 +24,7 @@
               </svg>
             </li>
             <li class="me-2 inline">
-              <InertiaLink :href="data.url.personalize" class="text-blue-500 hover:underline">
+              <InertiaLink :href="data.url.personalize" class="text-accent hover:underline">
                 {{ $t('Personalize your account') }}
               </InertiaLink>
             </li>
@@ -80,12 +80,12 @@
         <div class="mb-3 text-right">
           <ul>
             <li class="me-2 inline">
-              <span class="inline cursor-pointer text-blue-500 hover:underline" @click="enableAll">
+              <span class="inline cursor-pointer text-accent hover:underline" @click="enableAll">
                 {{ $t('Enable all') }}
               </span>
             </li>
             <li class="inline">
-              <span class="inline cursor-pointer text-blue-500 hover:underline" @click="disableAll">
+              <span class="inline cursor-pointer text-accent hover:underline" @click="disableAll">
                 {{ $t('Disable all') }}
               </span>
             </li>
@@ -109,13 +109,13 @@
               <!-- enable -->
               <span
                 v-if="!currency.active"
-                class="me-4 inline cursor-pointer text-blue-500 hover:underline"
+                class="me-4 inline cursor-pointer text-accent hover:underline"
                 @click="update(currency)">
                 {{ $t('Enable') }}
               </span>
 
               <!-- disable -->
-              <span v-else class="me-4 inline cursor-pointer text-blue-500 hover:underline" @click="update(currency)">
+              <span v-else class="me-4 inline cursor-pointer text-accent hover:underline" @click="update(currency)">
                 {{ $t('Disable') }}
               </span>
             </div>

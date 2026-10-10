@@ -42,7 +42,7 @@ const submit = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="data.url.back" class="text-blue-500 hover:underline">
+              <Link :href="data.url.back" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>

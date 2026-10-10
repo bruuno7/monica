@@ -32,7 +32,7 @@ const destroy = () => {
             {{ $t('You are here:') }}
           </div>
           <div class="inline">
-            <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+            <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
               {{ $t('Journals') }}
             </Link>
           </div>
@@ -57,7 +57,7 @@ const destroy = () => {
           <div class="mb-8 inline-flex rounded-md shadow-xs">
             <Link
               :href="data.url.show"
-              class="inline-flex items-center rounded-s-lg border border-gray-200 bg-gray-100 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-400 dark:font-bold dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+              class="inline-flex items-center rounded-s-lg border border-gray-200 bg-gray-100 px-4 py-2 text-sm font-medium text-accent hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-400 dark:font-bold dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -76,8 +76,8 @@ const destroy = () => {
 
             <Link
               :href="data.url.photo_index"
-              :class="{ 'bg-gray-100 text-blue-700 dark:bg-gray-400 dark:font-bold': defaultTab === 'life_events' }"
-              class="inline-flex items-center rounded-e-md border-b border-s border-t border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
+              :class="{ 'bg-gray-100 text-accent dark:bg-gray-400 dark:font-bold': defaultTab === 'life_events' }"
+              class="inline-flex items-center rounded-e-md border-b border-s border-t border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-accent-strong dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -105,7 +105,7 @@ const destroy = () => {
             </p>
             <ul v-if="data.years.length > 0" class="mb-8">
               <li v-for="year in data.years" :key="year.year" class="mb-2 flex items-center justify-between last:mb-0">
-                <Link :href="year.url.show" class="text-blue-500 hover:underline">{{ year.year }}</Link>
+                <Link :href="year.url.show" class="text-accent hover:underline">{{ year.year }}</Link>
                 <span class="text-sm text-gray-400">{{ year.posts }}</span>
               </li>
             </ul>
@@ -121,13 +121,13 @@ const destroy = () => {
               </li>
             </ul>
 
-            <Link :href="data.url.journal_metrics" class="mb-2 mt-6 block text-sm text-blue-500 hover:underline">{{
+            <Link :href="data.url.journal_metrics" class="mb-2 mt-6 block text-sm text-accent hover:underline">{{
               $t('Edit journal metrics')
             }}</Link>
-            <Link :href="data.url.edit" class="mb-2 block text-sm text-blue-500 hover:underline">{{
+            <Link :href="data.url.edit" class="mb-2 block text-sm text-accent hover:underline">{{
               $t('Edit journal information')
             }}</Link>
-            <span @click="destroy()" class="block cursor-pointer text-sm text-blue-500 hover:underline">{{
+            <span @click="destroy()" class="block cursor-pointer text-sm text-accent hover:underline">{{
               $t('Delete journal')
             }}</span>
           </div>
@@ -171,7 +171,7 @@ const destroy = () => {
                         <!-- title and excerpt -->
                         <div>
                           <span>
-                            <Link :href="post.url.show" class="text-blue-500 hover:underline">{{ post.title }}</Link>
+                            <Link :href="post.url.show" class="text-accent hover:underline">{{ post.title }}</Link>
                           </span>
                           <p v-if="post.excerpt">{{ post.excerpt }}</p>
                         </div>
@@ -233,9 +233,7 @@ const destroy = () => {
             </div>
 
             <div>
-              <Link :href="data.url.slice_index" class="text-sm text-blue-500 hover:underline">{{
-                $t('View all')
-              }}</Link>
+              <Link :href="data.url.slice_index" class="text-sm text-accent hover:underline">{{ $t('View all') }}</Link>
             </div>
           </div>
         </div>

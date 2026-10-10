@@ -20,7 +20,7 @@ defineProps({
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -35,7 +35,7 @@ defineProps({
               </svg>
             </li>
             <li class="inline">
-              <Link :href="data.url.back" class="text-blue-500 hover:underline">
+              <Link :href="data.url.back" class="text-accent hover:underline">
                 {{ data.journal.name }}
               </Link>
             </li>
@@ -222,7 +222,7 @@ defineProps({
             <!-- options -->
             <ul class="mb-6 text-sm">
               <li class="flex items-center">
-                <Link :href="data.url.edit" class="text-blue-500 hover:underline">
+                <Link :href="data.url.edit" class="text-accent hover:underline">
                   {{ $t('Edit post') }}
                 </Link>
               </li>

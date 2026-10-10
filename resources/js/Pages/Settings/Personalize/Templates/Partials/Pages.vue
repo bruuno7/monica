@@ -73,7 +73,7 @@
 
             <ul class="text-xs">
               <li class="me-4 inline cursor-pointer" @click="renamePageModal(element)">
-                <span class="text-blue-500 hover:underline">{{ $t('Rename') }}</span>
+                <span class="text-accent hover:underline">{{ $t('Rename') }}</span>
               </li>
               <li class="inline cursor-pointer text-red-500 hover:text-red-900" @click="destroy(element)">
                 {{ $t('Delete') }}

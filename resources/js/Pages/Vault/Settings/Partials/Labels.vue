@@ -79,7 +79,7 @@
           <!-- actions -->
           <ul class="text-sm">
             <li class="me-4 inline cursor-pointer" @click="updateLabelModal(label)">
-              <span class="text-blue-500 hover:underline">{{ $t('Edit') }}</span>
+              <span class="text-accent hover:underline">{{ $t('Edit') }}</span>
             </li>
             <li
               class="inline cursor-pointer text-red-500 hover:text-red-900 dark:hover:text-red-100"

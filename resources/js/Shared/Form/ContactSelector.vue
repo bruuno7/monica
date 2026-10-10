@@ -56,7 +56,7 @@ const localInputClasses = computed(() => {
   return [
     'ps-8 w-full rounded-md shadow-xs',
     'bg-white dark:bg-slate-900 border-gray-300 dark:border-gray-700',
-    'focus:border-indigo-300 focus:ring-3 focus:ring-indigo-200/50',
+    'focus:border-accent focus:ring-3 focus:ring-accent-soft',
     'disabled:bg-slate-50 dark:disabled:bg-slate-900',
     props.inputClass,
   ];
@@ -157,7 +157,7 @@ const search = _.debounce(() => {
 
           <!-- actions -->
           <ul class="text-sm">
-            <li class="inline cursor-pointer text-blue-500 hover:underline" @click="remove(contact)">
+            <li class="inline cursor-pointer text-accent hover:underline" @click="remove(contact)">
               {{ $t('Remove') }}
             </li>
           </ul>
@@ -213,7 +213,7 @@ const search = _.debounce(() => {
 
             <!-- actions -->
             <ul class="text-sm">
-              <li class="inline cursor-pointer text-blue-500 hover:underline" @click="add(contact)">{{ $t('Add') }}</li>
+              <li class="inline cursor-pointer text-accent hover:underline" @click="add(contact)">{{ $t('Add') }}</li>
             </ul>
           </li>
         </ul>
@@ -246,7 +246,7 @@ const search = _.debounce(() => {
 
             <!-- actions -->
             <ul class="text-sm">
-              <li class="inline cursor-pointer text-blue-500 hover:underline" @click="add(contact)">{{ $t('Add') }}</li>
+              <li class="inline cursor-pointer text-accent hover:underline" @click="add(contact)">{{ $t('Add') }}</li>
             </ul>
           </li>
         </ul>

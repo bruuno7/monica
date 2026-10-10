@@ -138,7 +138,7 @@ const useWebauthn = () => {
               <Link
                 v-if="canResetPassword"
                 :href="route('password.request')"
-                class="text-sm text-blue-500 hover:underline absolute right-0">
+                class="text-sm text-accent hover:underline absolute right-0">
                 {{ $t('Forgot your password?') }}
               </Link>
 
@@ -177,7 +177,7 @@ const useWebauthn = () => {
 
         <div v-if="isSignupEnabled" class="px-6 py-6 text-l dark:text-gray-50">
           {{ $t('New to Monica?') }}
-          <Link :href="route('register')" class="text-blue-500 text-l hover:underline">
+          <Link :href="route('register')" class="text-accent text-l hover:underline">
             {{ $t('Create an account') }}
           </Link>
         </div>

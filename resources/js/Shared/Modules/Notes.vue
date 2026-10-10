@@ -50,7 +50,7 @@
               :value="emotion.id"
               name="emotion"
               type="radio"
-              class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-700 dark:bg-slate-900 dark:text-indigo-400" />
+              class="h-4 w-4 border-gray-300 text-accent focus:ring-accent dark:border-gray-700 dark:bg-slate-900" />
             <label :for="emotion.type" class="ms-2 block font-medium text-gray-700 dark:text-gray-300">
               {{ emotion.name }}
             </label>
@@ -97,7 +97,7 @@
           <!-- excerpt, if it exists -->
           <div v-if="!note.show_full_content && note.body_excerpt" class="p-3">
             {{ note.body_excerpt }}
-            <span class="cursor-pointer text-blue-500 hover:underline" @click="showFullBody(note)">
+            <span class="cursor-pointer text-accent hover:underline" @click="showFullBody(note)">
               {{ $t('View all') }}
             </span>
           </div>
@@ -175,7 +175,7 @@
                   :value="emotion.id"
                   name="emotion"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:text-indigo-400" />
+                  class="h-4 w-4 border-gray-300 text-accent focus:ring-accent" />
                 <label :for="emotion.type" class="ms-2 block font-medium text-gray-700 dark:text-gray-300">
                   {{ emotion.name }}
                 </label>
@@ -194,7 +194,7 @@
       <div v-if="moduleMode" class="text-center">
         <InertiaLink
           :href="data.url.index"
-          class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-blue-500 hover:border-gray-500 dark:border-gray-700">
+          class="rounded-xs border border-gray-200 px-3 py-1 text-sm text-accent hover:border-gray-500 dark:border-gray-700">
           {{ $t('View all') }}
         </InertiaLink>
       </div>

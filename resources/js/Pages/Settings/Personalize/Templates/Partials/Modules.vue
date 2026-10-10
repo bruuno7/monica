@@ -32,7 +32,7 @@
         <span>{{ module.name }}</span>
         <span
           v-if="!module.already_used"
-          class="inline cursor-pointer text-blue-500 hover:underline"
+          class="inline cursor-pointer text-accent hover:underline"
           @click="add(module)"
           >{{ $t('Add') }}</span
         >

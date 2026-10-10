@@ -25,11 +25,12 @@ class UserPreferencesIndexViewHelperTest extends TestCase
         $array = UserPreferencesIndexViewHelper::data($user);
 
         $this->assertEquals(
-            9,
+            10,
             count($array)
         );
 
         $this->assertArrayHasKey('help', $array);
+        $this->assertArrayHasKey('theme', $array);
         $this->assertArrayHasKey('name_order', $array);
         $this->assertArrayHasKey('date_format', $array);
         $this->assertArrayHasKey('timezone', $array);
@@ -289,6 +290,27 @@ class UserPreferencesIndexViewHelperTest extends TestCase
         $this->assertEquals('ltr', $array['dir']);
         $this->assertEquals([
             'store' => env('APP_URL').'/settings/preferences/locale',
+        ], $array['url']);
+    }
+
+    /** @test */
+    public function it_gets_the_data_needed_for_theme(): void
+    {
+        $user = User::factory()->create([
+            'theme' => User::THEME_DARK,
+            'accent_color' => 'rose',
+            'oled_dark' => true,
+        ]);
+        $array = UserPreferencesIndexViewHelper::dtoTheme($user);
+
+        $this->assertEquals(User::THEME_DARK, $array['theme']);
+        $this->assertEquals('Dark', $array['theme_i18n']);
+        $this->assertEquals('rose', $array['accent_color']);
+        $this->assertTrue($array['oled_dark']);
+        $this->assertEquals(['light', 'dark', 'system'], $array['themes']->pluck('id')->toArray());
+        $this->assertEquals(User::ACCENT_COLORS, $array['accent_colors']->pluck('id')->toArray());
+        $this->assertEquals([
+            'store' => env('APP_URL').'/settings/preferences/theme',
         ], $array['url']);
     }
 }

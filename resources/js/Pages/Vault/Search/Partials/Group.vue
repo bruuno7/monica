@@ -33,7 +33,7 @@ defineProps({
         v-for="group in data"
         :key="group.id"
         class="item-list border-b border-gray-200 p-3 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
-        <Link :href="group.url" class="text-blue-500 hover:underline">
+        <Link :href="group.url" class="text-accent hover:underline">
           {{ group.name }}
         </Link>
       </li>

@@ -52,7 +52,7 @@ const submit = () => {
               {{ $t('You are here:') }}
             </li>
             <li class="me-2 inline">
-              <Link :href="layoutData.vault.url.journals" class="text-blue-500 hover:underline">
+              <Link :href="layoutData.vault.url.journals" class="text-accent hover:underline">
                 {{ $t('Journals') }}
               </Link>
             </li>
@@ -67,7 +67,7 @@ const submit = () => {
               </svg>
             </li>
             <li class="relative me-2 inline">
-              <Link :href="data.journal.url.show" class="text-blue-500 hover:underline">{{ data.journal.name }}</Link>
+              <Link :href="data.journal.url.show" class="text-accent hover:underline">{{ data.journal.name }}</Link>
             </li>
             <li class="relative me-2 inline">
               <svg
@@ -135,7 +135,7 @@ const submit = () => {
               v-for="slice in localSlices"
               :key="slice.id"
               class="border-b border-gray-200 px-5 py-4 hover:bg-slate-50 dark:border-gray-700 dark:bg-slate-900 dark:hover:bg-slate-800">
-              <Link :href="slice.url.show" class="text-blue-500 hover:underline">{{ slice.name }}</Link>
+              <Link :href="slice.url.show" class="text-accent hover:underline">{{ slice.name }}</Link>
               <span v-if="slice.date_range" class="mt-1 block text-xs">{{ slice.date_range }}</span>
             </li>
           </ul>
