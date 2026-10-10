@@ -35,6 +35,7 @@ import Posts from '@/Shared/Modules/Posts.vue';
 import LifeEvent from '@/Shared/Modules/LifeEvent.vue';
 import QuickFacts from '@/Shared/Modules/QuickFacts.vue';
 import StayInTouch from '@/Shared/Modules/StayInTouch.vue';
+import ContactHero from '@/Shared/Modules/ContactHero.vue';
 import Uploadcare from '@/Components/Uploadcare.vue';
 import { ChevronRight } from 'lucide-vue-next';
 
@@ -202,14 +203,23 @@ const navigateToSelected = () => {
           <span class="ms-4"> 🕷️ </span>
         </div>
 
+        <ContactHero
+          v-if="data.hero"
+          :data="data.hero"
+          :stay-in-touch="data.stay_in_touch"
+          :contact-id="data.hero.id"
+          :contact-url="data.hero.url.show"
+          :editable="layoutData.vault.permission.at_least_editor" />
+
         <div class="special-grid grid grid-cols-1 gap-6 sm:grid-cols-3">
           <!-- left -->
           <div class="p-3 sm:p-3">
             <div v-if="data.contact_information.length > 0" class="mb-8">
               <div v-for="module in data.contact_information" :key="module.id">
-                <ContactAvatar v-if="module.type === 'avatar'" :data="module.data" />
+                <!-- avatar and name are displayed in the hero above -->
+                <ContactAvatar v-if="module.type === 'avatar' && !data.hero" :data="module.data" />
 
-                <ContactName v-else-if="module.type === 'contact_names'" :data="module.data" />
+                <ContactName v-else-if="module.type === 'contact_names' && !data.hero" :data="module.data" />
 
                 <FamilySummary v-else-if="module.type === 'family_summary'" :data="module.data" />
 

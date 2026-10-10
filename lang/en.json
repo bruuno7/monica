@@ -1637,5 +1637,13 @@
   ":count entry on :date|:count entries on :date": ":count entry on :date|:count entries on :date",
   ":count entry over the last year|:count entries over the last year": ":count entry over the last year|:count entries over the last year",
   "active on :count day|active on :count days": "active on :count day|active on :count days",
-  "Go to today": "Go to today"
+  "Go to today": "Go to today",
+  ":count years old": ":count years old",
+  "You were in touch today": "You were in touch today",
+  "You were in touch yesterday": "You were in touch yesterday",
+  "Last interaction :count days ago": "Last interaction :count days ago",
+  "Remove from favorites": "Remove from favorites",
+  "Add to favorites": "Add to favorites",
+  "Write a note": "Write a note",
+  "Remind me": "Remind me"
 }

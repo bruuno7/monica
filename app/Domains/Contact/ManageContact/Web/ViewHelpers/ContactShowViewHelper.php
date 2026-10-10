@@ -55,6 +55,7 @@ class ContactShowViewHelper
             'group_summary_information' => GroupsViewHelper::summary($contact),
             'quick_fact_template_entries' => self::quickFacts($contact),
             'stay_in_touch' => StayInTouchHelper::dto($contact, $user),
+            'hero' => self::hero($contact, $user),
             'modules' => $firstPage ? self::modules($firstPage, $contact, $user) : [],
             'avatar' => [
                 'uploadcare' => StorageHelper::uploadcare(),
@@ -114,6 +115,7 @@ class ContactShowViewHelper
             'group_summary_information' => GroupsViewHelper::summary($contact),
             'quick_fact_template_entries' => self::quickFacts($contact),
             'stay_in_touch' => StayInTouchHelper::dto($contact, $user),
+            'hero' => self::hero($contact, $user),
             'modules' => self::modules($templatePage, $contact, $user),
             'avatar' => [
                 'uploadcare' => StorageHelper::uploadcare(),
@@ -356,6 +358,46 @@ class ContactShowViewHelper
             'url' => [
                 'toggle' => route('contact.quick_fact.toggle', [
                     'vault' => $contact->vault->id,
+                    'contact' => $contact->id,
+                ]),
+            ],
+        ];
+    }
+
+    /**
+     * The summary displayed at the top of the profile: who this person is, at a glance.
+     */
+    public static function hero(Contact $contact, User $user): array
+    {
+        $entry = $user->contacts()
+            ->wherePivot('contact_id', $contact->id)
+            ->first();
+
+        return [
+            'id' => $contact->id,
+            'name' => $contact->name,
+            'avatar' => $contact->avatar,
+            'age' => $contact->age,
+            'pronoun' => $contact->pronoun?->name,
+            'job' => collect([$contact->job_position, $contact->company?->name])->filter()->join(' · '),
+            'is_favorite' => $entry !== null ? (bool) $entry->pivot->is_favorite : false,
+            'labels' => $contact->labels->map(fn ($label) => [
+                'id' => $label->id,
+                'name' => $label->name,
+                'bg_color' => $label->bg_color,
+                'text_color' => $label->text_color,
+            ])->values(),
+            'url' => [
+                'show' => route('contact.show', [
+                    'vault' => $contact->vault_id,
+                    'contact' => $contact->id,
+                ]),
+                'edit' => route('contact.edit', [
+                    'vault' => $contact->vault_id,
+                    'contact' => $contact->id,
+                ]),
+                'toggle_favorite' => route('contact.favorite.update', [
+                    'vault' => $contact->vault_id,
                     'contact' => $contact->id,
                 ]),
             ],

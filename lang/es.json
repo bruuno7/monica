@@ -1688,5 +1688,13 @@
   ":count entry on :date|:count entries on :date": ":count entrada el :date|:count entradas el :date",
   ":count entry over the last year|:count entries over the last year": ":count entrada en el último año|:count entradas en el último año",
   "active on :count day|active on :count days": "con actividad :count día|con actividad :count días",
-  "Go to today": "Ir a hoy"
+  "Go to today": "Ir a hoy",
+  ":count years old": ":count años",
+  "You were in touch today": "Hoy habéis estado en contacto",
+  "You were in touch yesterday": "Ayer estuvisteis en contacto",
+  "Last interaction :count days ago": "Última interacción hace :count días",
+  "Remove from favorites": "Quitar de favoritos",
+  "Add to favorites": "Añadir a favoritos",
+  "Write a note": "Escribir una nota",
+  "Remind me": "Recuérdamelo"
 }
