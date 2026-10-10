@@ -28,6 +28,7 @@ class ContactController extends Controller
     public function index(Request $request, Vault $vault)
     {
         $contacts = $vault->contacts()
+            ->with(['labels', 'importantDates', 'company'])
             ->where('listed', true);
 
         $column_to_order = preg_replace('/^%([a-z_]+)%.*$/', '$1', Auth::user()->name_order);
@@ -38,6 +39,9 @@ class ContactController extends Controller
                 break;
             case User::CONTACT_SORT_ORDER_DESC:
                 $contacts = $contacts->orderBy($column_to_order, 'desc');
+                break;
+            case User::CONTACT_SORT_ORDER_LAST_INTERACTION:
+                $contacts = $contacts->orderByRaw('last_interaction_at is null, last_interaction_at desc');
                 break;
             default:
                 $contacts = $contacts->orderBy('last_updated_at', 'desc');

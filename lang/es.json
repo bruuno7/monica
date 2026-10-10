@@ -1608,5 +1608,19 @@
   "You wanted to stay in touch with :name, but nothing happened for :count days.": "Querías mantener el contacto con :name, pero no ha pasado nada en :count días.",
   "A short message is often enough to keep a relationship alive.": "Un mensaje corto suele bastar para mantener viva una relación.",
   "Open the profile of :name": "Abrir el perfil de :name",
-  "👋 Time to reach out to :name: nothing happened for :count days.": "👋 Toca dar señales de vida a :name: no ha pasado nada en :count días."
+  "👋 Time to reach out to :name: nothing happened for :count days.": "👋 Toca dar señales de vida a :name: no ha pasado nada en :count días.",
+  "By last interaction": "Por última interacción",
+  "List": "Lista",
+  "Cards": "Tarjetas",
+  "Filter by name, job or label…": "Filtra por nombre, trabajo o etiqueta…",
+  "Today": "Hoy",
+  "Yesterday": "Ayer",
+  ":count days ago": "hace :count días",
+  ":label today!": "¡:label hoy!",
+  ":label tomorrow": ":label mañana",
+  ":label in :count days": ":label en :count días",
+  "No contact on this page matches “:term”": "Ningún contacto de esta página coincide con “:term”",
+  "Search the whole vault to find them.": "Busca en toda la bóveda para encontrarlo.",
+  "No contacts yet": "Aún no hay contactos",
+  "Add the people you care about and start documenting your life together.": "Añade a las personas que te importan y empieza a documentar vuestra vida en común."
 }

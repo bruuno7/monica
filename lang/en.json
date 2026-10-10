@@ -1557,5 +1557,19 @@
   "You wanted to stay in touch with :name, but nothing happened for :count days.": "You wanted to stay in touch with :name, but nothing happened for :count days.",
   "A short message is often enough to keep a relationship alive.": "A short message is often enough to keep a relationship alive.",
   "Open the profile of :name": "Open the profile of :name",
-  "👋 Time to reach out to :name: nothing happened for :count days.": "👋 Time to reach out to :name: nothing happened for :count days."
+  "👋 Time to reach out to :name: nothing happened for :count days.": "👋 Time to reach out to :name: nothing happened for :count days.",
+  "By last interaction": "By last interaction",
+  "List": "List",
+  "Cards": "Cards",
+  "Filter by name, job or label…": "Filter by name, job or label…",
+  "Today": "Today",
+  "Yesterday": "Yesterday",
+  ":count days ago": ":count days ago",
+  ":label today!": ":label today!",
+  ":label tomorrow": ":label tomorrow",
+  ":label in :count days": ":label in :count days",
+  "No contact on this page matches “:term”": "No contact on this page matches “:term”",
+  "Search the whole vault to find them.": "Search the whole vault to find them.",
+  "No contacts yet": "No contacts yet",
+  "Add the people you care about and start documenting your life together.": "Add the people you care about and start documenting your life together."
 }

@@ -76,6 +76,8 @@ class User extends Authenticatable implements HasLocalePreference, MustVerifyEma
 
     public const CONTACT_SORT_ORDER_LAST_UPDATED = 'last_updated';
 
+    public const CONTACT_SORT_ORDER_LAST_INTERACTION = 'last_interaction';
+
     /**
      * Possible themes.
      */
