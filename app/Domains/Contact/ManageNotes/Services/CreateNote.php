@@ -65,6 +65,7 @@ class CreateNote extends BaseService implements ServiceInterface
 
         $this->contact->last_updated_at = Carbon::now();
         $this->contact->save();
+        $this->contact->recordInteraction();
 
         $this->createFeedItem();
 

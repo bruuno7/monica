@@ -107,6 +107,7 @@ class CreateLifeEvent extends BaseService implements ServiceInterface
         foreach ($this->partipantsCollection as $participant) {
             $participant->last_updated_at = Carbon::now();
             $participant->save();
+            $participant->recordInteraction(Carbon::parse($this->data['happened_at']));
         }
     }
 

@@ -7,6 +7,7 @@ use App\Helpers\NameHelper;
 use App\Models\Contact;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class UserPreferencesIndexViewHelper
 {
@@ -242,6 +243,7 @@ class UserPreferencesIndexViewHelper
                 'emerald' => trans('Emerald'),
                 'amber' => trans('Amber'),
                 'teal' => trans('Teal'),
+                default => Str::ucfirst($color),
             },
         ]);
 

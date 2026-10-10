@@ -42,6 +42,7 @@ use App\Domains\Contact\ManageQuickFacts\Web\Controllers\ContactQuickFactToggleC
 use App\Domains\Contact\ManageRelationships\Web\Controllers\ContactRelationshipsController;
 use App\Domains\Contact\ManageReligion\Web\Controllers\ContactModuleReligionController;
 use App\Domains\Contact\ManageReminders\Web\Controllers\ContactModuleReminderController;
+use App\Domains\Contact\ManageStayInTouch\Web\Controllers\ContactStayInTouchController;
 use App\Domains\Contact\ManageTasks\Web\Controllers\ContactModuleTaskController;
 use App\Domains\Settings\CancelAccount\Web\Controllers\CancelAccountController;
 use App\Domains\Settings\ManageAddressTypes\Web\Controllers\PersonalizeAddressTypeController;
@@ -264,6 +265,10 @@ Route::middleware([
                     Route::delete('', [ContactController::class, 'destroy'])->name('contact.destroy');
 
                     Route::post('vcard', [ContactVCardController::class, 'download'])->name('contact.vcard.download')->withoutMiddleware([HandleInertiaRequests::class]);
+
+                    // stay in touch
+                    Route::put('stayInTouch', [ContactStayInTouchController::class, 'update'])->name('contact.stay_in_touch.update');
+                    Route::post('stayInTouch/touch', [ContactStayInTouchController::class, 'touch'])->name('contact.stay_in_touch.touch');
 
                     // quick facts
                     Route::get('quickFacts/{template}', [ContactQuickFactController::class, 'show'])->name('contact.quick_fact.show');

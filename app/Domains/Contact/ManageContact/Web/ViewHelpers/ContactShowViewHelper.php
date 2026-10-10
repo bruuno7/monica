@@ -27,6 +27,7 @@ use App\Domains\Contact\ManageReligion\Web\ViewHelpers\ModuleReligionViewHelper;
 use App\Domains\Contact\ManageReminders\Web\ViewHelpers\ModuleRemindersViewHelper;
 use App\Domains\Contact\ManageTasks\Web\ViewHelpers\ModuleContactTasksViewHelper;
 use App\Domains\Vault\ManageJournals\Web\ViewHelpers\ModulePostsViewHelper;
+use App\Helpers\StayInTouchHelper;
 use App\Helpers\StorageHelper;
 use App\Models\Contact;
 use App\Models\Module;
@@ -53,6 +54,7 @@ class ContactShowViewHelper
             'contact_information' => self::getContactInformation($templatePages, $contact, $user),
             'group_summary_information' => GroupsViewHelper::summary($contact),
             'quick_fact_template_entries' => self::quickFacts($contact),
+            'stay_in_touch' => StayInTouchHelper::dto($contact, $user),
             'modules' => $firstPage ? self::modules($firstPage, $contact, $user) : [],
             'avatar' => [
                 'uploadcare' => StorageHelper::uploadcare(),
@@ -107,6 +109,7 @@ class ContactShowViewHelper
             'contact_information' => self::getContactInformation($templatePages, $contact, $user),
             'group_summary_information' => GroupsViewHelper::summary($contact),
             'quick_fact_template_entries' => self::quickFacts($contact),
+            'stay_in_touch' => StayInTouchHelper::dto($contact, $user),
             'modules' => self::modules($templatePage, $contact, $user),
             'avatar' => [
                 'uploadcare' => StorageHelper::uploadcare(),

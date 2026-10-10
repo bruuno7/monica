@@ -49,11 +49,12 @@ class ContactShowViewHelperTest extends TestCase
         $array = ContactShowViewHelper::data($contact, $user);
 
         $this->assertEquals(
-            10,
+            11,
             count($array)
         );
 
         $this->assertArrayHasKey('contact_name', $array);
+        $this->assertArrayHasKey('stay_in_touch', $array);
         $this->assertArrayHasKey('listed', $array);
         $this->assertArrayHasKey('template_pages', $array);
         $this->assertArrayHasKey('contact_information', $array);

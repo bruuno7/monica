@@ -4,6 +4,8 @@ namespace App\Helpers;
 
 use Illuminate\Support\Str;
 
+use function Safe\preg_replace;
+
 class MarkdownHelper
 {
     /**

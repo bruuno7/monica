@@ -8,6 +8,7 @@ use App\Helpers\ContactImportantDateHelper;
 use App\Helpers\ImportantDateHelper;
 use App\Helpers\NameHelper;
 use App\Helpers\ScoutHelper;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -53,6 +54,9 @@ class Contact extends VCardResource
         'show_quick_facts',
         'template_id',
         'last_updated_at',
+        'last_interaction_at',
+        'stay_in_touch_frequency',
+        'stay_in_touch_triggered_at',
         'company_id',
         'job_position',
         'listed',
@@ -77,7 +81,29 @@ class Contact extends VCardResource
         'listed' => 'boolean',
         'show_quick_facts' => 'boolean',
         'last_updated_at' => 'datetime',
+        'last_interaction_at' => 'datetime',
+        'stay_in_touch_triggered_at' => 'datetime',
     ];
+
+    /**
+     * Remember that something happened with this contact (a note, a call, a post…).
+     * Only moves the date forward: a note about last year does not reset the counter.
+     */
+    public function recordInteraction(?Carbon $happenedAt = null): void
+    {
+        $happenedAt = ($happenedAt ?? Carbon::now())->copy();
+
+        if ($happenedAt->isFuture()) {
+            $happenedAt = Carbon::now();
+        }
+
+        if ($this->last_interaction_at === null || $happenedAt->greaterThan($this->last_interaction_at)) {
+            $this->last_interaction_at = $happenedAt;
+            // the contact is no longer cold, so it can be flagged again later
+            $this->stay_in_touch_triggered_at = null;
+            $this->saveQuietly();
+        }
+    }
 
     /**
      * Get the indexable data array for the model.

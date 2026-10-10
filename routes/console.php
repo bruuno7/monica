@@ -4,6 +4,7 @@ use App\Console\Scheduling\Schedule;
 use App\Domains\Contact\Dav\Jobs\CleanSyncToken;
 use App\Domains\Contact\DavClient\Jobs\UpdateAddressBooks;
 use App\Domains\Contact\ManageReminders\Jobs\ProcessScheduledContactReminders;
+use App\Domains\Contact\ManageStayInTouch\Jobs\ProcessStayInTouch;
 use App\Logging\CleanLogs;
 
 /*
@@ -25,5 +26,6 @@ if (config('telescope.enabled')) {
 }
 Schedule::job(UpdateAddressBooks::class, 'hourly');
 Schedule::job(ProcessScheduledContactReminders::class, 'minutes', 1);
+Schedule::job(ProcessStayInTouch::class, 'daily');
 Schedule::job(CleanSyncToken::class, 'daily');
 Schedule::job(CleanLogs::class, 'daily');

@@ -16,6 +16,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
+use function Safe\preg_split;
+
 /**
  * Record something about one or more contacts in a single step, from anywhere
  * in the app: a note, a call, a task or a reminder.
@@ -121,6 +123,7 @@ class QuickCapture extends BaseService implements ServiceInterface
                 'year' => $date->year,
                 'type' => ContactReminder::TYPE_ONE_TIME,
             ]),
+            default => throw new \InvalidArgumentException('Unknown quick capture type'),
         };
 
         return Contact::findOrFail($contactId);

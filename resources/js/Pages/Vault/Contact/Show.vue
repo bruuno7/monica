@@ -34,6 +34,7 @@ import Religion from '@/Shared/Modules/Religion.vue';
 import Posts from '@/Shared/Modules/Posts.vue';
 import LifeEvent from '@/Shared/Modules/LifeEvent.vue';
 import QuickFacts from '@/Shared/Modules/QuickFacts.vue';
+import StayInTouch from '@/Shared/Modules/StayInTouch.vue';
 import Uploadcare from '@/Components/Uploadcare.vue';
 import { ChevronRight } from 'lucide-vue-next';
 
@@ -223,6 +224,11 @@ const navigateToSelected = () => {
                 <Religion v-else-if="module.type === 'religions'" :data="module.data" />
               </div>
             </div>
+
+            <StayInTouch
+              v-if="data.stay_in_touch"
+              :data="data.stay_in_touch"
+              :editable="layoutData.vault.permission.at_least_editor" />
 
             <ul class="text-xs">
               <!-- remove avatar -->
