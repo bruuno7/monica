@@ -18,6 +18,7 @@
  */
 @theme inline {
   --color-surface: var(--surface);
+  --color-surface-card: var(--surface-card);
   --color-surface-raised: var(--surface-raised);
   --color-surface-sunken: var(--surface-sunken);
   --color-ink: var(--ink);
@@ -36,6 +37,7 @@
     color-scheme: light;
 
     --surface: #ffffff;
+    --surface-card: #ffffff;
     --surface-raised: var(--color-gray-50);
     --surface-sunken: var(--color-gray-100);
     --ink: var(--color-gray-700);
@@ -54,6 +56,7 @@
     color-scheme: dark;
 
     --surface: var(--color-gray-800);
+    --surface-card: var(--color-gray-900);
     --surface-raised: var(--color-gray-900);
     --surface-sunken: var(--color-slate-900);
     --ink: var(--color-gray-300);
@@ -71,6 +74,7 @@
   /* Pure black variant for OLED screens. */
   .dark.oled {
     --surface: #000000;
+    --surface-card: #0a0a0a;
     --surface-raised: #0a0a0a;
     --surface-sunken: #050505;
     --line: var(--color-neutral-800);
@@ -162,6 +166,22 @@
   p {
     text-wrap: pretty;
   }
+
+  /* A hairline outline keeps photos and avatars crisp on any background. */
+  img.avatar,
+  .avatar img {
+    outline: 1px solid oklch(0 0 0 / 0.1);
+    outline-offset: -1px;
+  }
+
+  .dark img.avatar,
+  .dark .avatar img {
+    outline-color: oklch(1 0 0 / 0.1);
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 .icon-breadcrumb {

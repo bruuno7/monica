@@ -11,6 +11,7 @@ import Errors from '@/Shared/Form/Errors.vue';
 import JetConfirmationModal from '@/Components/Jetstream/ConfirmationModal.vue';
 import Dropdown from '@/Shared/Form/Dropdown.vue';
 import { filter } from 'lodash';
+import { ChevronRight } from 'lucide-vue-next';
 
 const props = defineProps({
   layoutData: Object,
@@ -120,14 +121,7 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="me-2 inline">
               <Link :href="data.url.personalize" class="text-accent hover:underline">
@@ -135,14 +129,7 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="inline">
               {{ $t('Contact information types') }}

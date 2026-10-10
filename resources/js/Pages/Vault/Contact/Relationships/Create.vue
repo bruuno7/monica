@@ -14,14 +14,7 @@
               </InertiaLink>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="me-2 inline">
               <InertiaLink :href="data.url.contact" class="text-accent hover:underline">
@@ -29,14 +22,7 @@
               </InertiaLink>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="inline">{{ $t('Add a relationship') }}</li>
           </ul>
@@ -341,9 +327,11 @@ import Dropdown from '@/Shared/Form/Dropdown.vue';
 import Errors from '@/Shared/Form/Errors.vue';
 import ContactSelector from '@/Shared/Form/ContactSelector.vue';
 import Avatar from '@/Shared/Avatar.vue';
+import { ChevronRight } from 'lucide-vue-next';
 
 export default {
   components: {
+    ChevronRight,
     InertiaLink: Link,
     Layout,
     PrettyLink,

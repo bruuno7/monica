@@ -5,6 +5,7 @@ import { trans } from 'laravel-vue-i18n';
 import Layout from '@/Layouts/Layout.vue';
 import ContactCard from '@/Shared/ContactCard.vue';
 import Uploadcare from '@/Components/Uploadcare.vue';
+import { ChevronRight } from 'lucide-vue-next';
 
 const props = defineProps({
   layoutData: Object,
@@ -71,40 +72,19 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="relative me-2 inline">
               <Link :href="data.journal.url.show" class="text-accent hover:underline">{{ data.journal.name }}</Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="relative me-2 inline">
               <Link :href="data.url.slices_index" class="text-accent hover:underline">{{ $t('Slices of life') }}</Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="inline">
               {{ localSlice.name }}

@@ -17,6 +17,7 @@ import ContactSelector from '@/Shared/Form/ContactSelector.vue';
 import JetConfirmationModal from '@/Components/Jetstream/ConfirmationModal.vue';
 import JetDangerButton from '@/Components/Jetstream/DangerButton.vue';
 import JetSecondaryButton from '@/Components/Jetstream/SecondaryButton.vue';
+import { ChevronRight } from 'lucide-vue-next';
 
 const props = defineProps({
   layoutData: Object,
@@ -165,14 +166,7 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="inline">
               <Link :href="data.url.back" class="text-accent hover:underline">
@@ -180,14 +174,7 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="me-2 inline">
               <Link :href="data.url.show" class="text-accent hover:underline">
@@ -195,14 +182,7 @@ const destroy = () => {
               </Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="relative inline">
               {{ $t('Edit a post') }}

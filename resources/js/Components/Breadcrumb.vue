@@ -1,5 +1,6 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import { ChevronRight } from 'lucide-vue-next';
 
 defineProps({
   items: Array,
@@ -14,14 +15,7 @@ defineProps({
       </li>
       <template v-for="(item, index) in items" :key="index">
         <li v-if="index > 0" class="relative ms-2 inline">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon-breadcrumb relative inline h-3 w-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+          <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
         </li>
 
         <li class="inline" :class="{ 'ms-2': index > 0 }">

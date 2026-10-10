@@ -2,6 +2,7 @@
 import { Link } from '@inertiajs/vue3';
 import Layout from '@/Layouts/Layout.vue';
 import ContactCard from '@/Shared/ContactCard.vue';
+import { ChevronRight } from 'lucide-vue-next';
 
 defineProps({
   layoutData: Object,
@@ -23,14 +24,7 @@ defineProps({
               <Link :href="data.url.reports" class="text-accent hover:underline">{{ $t('Reports') }}</Link>
             </li>
             <li class="relative me-2 inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon-breadcrumb relative inline h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight class="icon-breadcrumb relative inline h-3 w-3" />
             </li>
             <li class="inline">{{ $t('List of all important dates') }}</li>
           </ul>
